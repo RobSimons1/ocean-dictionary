@@ -1,12 +1,27 @@
-<html>
-    <head>
-
-    </head>
-    <body>
+{% extends 'base.html' %}
+{% block content %}
+    <ul class="collapsible" data-collapsible="accordion">
         {% for word in words %}
-            {{word.category_name}}
-            {{word.word_id}}
-            {{word.word_definition}}
+        <li>
+            <div class="collapsible-header">
+               <div class="col s3">
+                    <i class="material-icons">expand_more</i>
+                    <a class="waves-effect waves-light btn btn_small">Done</a>
+                    <a href="{{url_for('edit_word', word_id=word._id)}}"class="waves-effect waves-light btn btn_small blue">Edit</a>
+                    <a href="{{url_for('delete_word', word_id=word._id)}}"class="waves-effect waves-light btn btn_small blue">Delete</a>
+                </div>
+                
+                <div class=" word_header col s9">
+                    <strong>{{word.category_name}}</strong> - {{word.word_name}}
+                </div>
+            </div>
+            <div class="collapsible-body">
+                <span>
+                    {{word.word_definition}}
+                    Here is some text
+                </span>
+            </div>
+        </li>
         {% endfor %}
-    </body>
-</html>
+    </ul>
+{% endblock %}   
