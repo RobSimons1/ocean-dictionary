@@ -74,6 +74,17 @@ def update_category(category_id):
         {'category_name': request.form.get('category_name')})
     return redirect(url_for('get_categories'))  
 
+@app.route('/insert_category', methods=['POST'])
+def insert_category():
+    category_doc = {'category_name': request.form.get('category_name')}
+    mongo.db.categories.insert_one(category_doc)
+    return redirect(url_for('get_categories'))
+
+
+@app.route('/add_category')
+def add_category():
+    return render_template('addcategory.html')    
+
 @app.route('/delete_category/<category_id>')
 def delete_category(category_id):
     mongo.db.categories.remove({'_id': ObjectId(category_id)})
