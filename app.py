@@ -11,7 +11,7 @@ app.config["MONGO_URI"] =os.getenv('MONGO_URI')
 mongo = PyMongo(app)
 
 
-  
+@app.route('/')  
 @app.route('/get_words')
 def get_words():
     return render_template("words.html", words=mongo.db.words.find())
@@ -53,7 +53,6 @@ def delete_word(word_id):
     mongo.db.words.remove({'_id': ObjectId(word_id)})
     return redirect(url_for('get_words')) 
 
-@app.route('/')
 @app.route('/get_categories')
 def get_categories():
     return render_template('categories.html',
