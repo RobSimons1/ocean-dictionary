@@ -91,7 +91,28 @@ def add_category():
 @app.route('/delete_category/<category_id>')
 def delete_category(category_id):
     mongo.db.categories.remove({'_id': ObjectId(category_id)})
-    return redirect(url_for('get_categories'))                                   
+    return redirect(url_for('get_categories'))  
+
+
+
+# GET METHOD
+@app.route('/get_search')
+
+def get_search():
+    """
+    Route to accept a GET request to perform
+    a search
+    """
+    
+    query = request.args.get('q') # Grab the arugments via GET request
+    print(query)
+    print("hhhh")
+    # mongo.db.create_index( { name: "text", description: "text" } )
+
+    results = mongo.db.words.find({'$text':{'$search': query}}) # Search the db 
+    print("hhhhh")
+    return render_template('search.html', results=results, query=query) # Pass the results to the view
+
                             
 if __name__ == "__main__":
     app.run(host=os.getenv("IP"),
