@@ -108,12 +108,23 @@ def get_search():
     print(query)
     print("hhhh")
     # mongo.db.create_index( { name: "text", description: "text" } )
+    # mongo.db.words.create_index({ "word_name": "text" })
+    # total = mongo.db.words.create_index({'$text': {'$search': db_query }})
+    words =  mongo.db.words.find({"word_name": { "$regex": query }})
+    words = list(words)
+    # words =  mongo.db.words.find()
 
+    # for i in words:
+    #     print(i)
+    
     results = mongo.db.words.find({'$text':{'$search': query}}) # Search the db 
-    print("hhhhh")
-    return render_template('search.html', results=results, query=query) # Pass the results to the view
+    results = list(results)
+    # for i in results:
+    #     print(i)
+    # print("hhhhh")
+    return render_template('search.html', words=words, query=results) # Pass the results to the view
 
                             
 if __name__ == "__main__":
     app.run(host=os.getenv("IP"),
-    port=os.getenv("PORT"))
+    port=os.getenv("PORT"), debug=True)
