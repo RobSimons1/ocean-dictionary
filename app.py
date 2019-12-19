@@ -111,7 +111,8 @@ def get_search():
     # mongo.db.create_index( { name: "text", description: "text" } )
     # mongo.db.words.create_index({ "word_name": "text" })
     # total = mongo.db.words.create_index({'$text': {'$search': db_query }})
-    words = mongo.db.words.find({"word_name": { "$regex": query }}).sort("word_name",-1)
+    words = mongo.db.words.find({"word_name": { "$regex": query }}).sort("word_name",-1) 
+    # sort("word_name",-1) sorts ino ascending alphabetical order in search.html
     words = list(words)
     # list.sort(word_name)
     # words = mongo.db.words.sort("word_name")
