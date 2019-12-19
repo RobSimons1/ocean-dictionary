@@ -60,7 +60,8 @@ def delete_word(word_id):
 @app.route('/get_categories')
 def get_categories():
     return render_template('categories.html',
-                           categories=mongo.db.categories.find().sort("category_name"))   
+                           categories=mongo.db.categories.find().sort("category_name")) 
+                           # .sort added to display categories in alphabetical order  
 
 
 @app.route('/edit_category/<category_id>')
@@ -110,8 +111,9 @@ def get_search():
     # mongo.db.create_index( { name: "text", description: "text" } )
     # mongo.db.words.create_index({ "word_name": "text" })
     # total = mongo.db.words.create_index({'$text': {'$search': db_query }})
-    words = mongo.db.words.find({"word_name": { "$regex": query }})
+    words = mongo.db.words.find({"word_name": { "$regex": query }}).sort("word_name",-1)
     words = list(words)
+    # list.sort(word_name)
     # words = mongo.db.words.sort("word_name")
 
     # for i in words:
@@ -119,6 +121,7 @@ def get_search():
     
     results = mongo.db.words.find({'$text':{'$search': query}}) # Search the db 
     results = list(results)
+    # list.sort(text)
     # results = mongo.db.words.sort("word_name")
     # for i in results:
     #     print(i)
