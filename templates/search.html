@@ -2,7 +2,7 @@
 {% block content %}
 <h3>Word Results</h3>
     <ul>
-     {% for word in words %}
+     {% for word in words|sort(attribute='word_name', case_sensitive=false) %}
         <li>            
                <div class="col s3"> 
                <h4> {{word.word_name}} </h4>                
