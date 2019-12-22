@@ -2,7 +2,9 @@ import os
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId 
+import re
 from dotenv import load_dotenv
+
 load_dotenv()
 
 app = Flask(__name__)
@@ -98,36 +100,35 @@ def delete_category(category_id):
 
 # GET METHOD
 @app.route('/get_search')
-
 def get_search():
     """
     Route to accept a GET request to perform
     a search
-    """
-    
+    """ 
     query = request.args.get('q') # Grab the arugments via GET request
     print(query)
-    print("hhhh")
+    que = {'$regex': re.compile('.*{}.*'.format(query)), '$options': 'i'}
+    results = mongo.db.words.find({ "word_name": que})
     # mongo.db.create_index( { name: "text", description: "text" } )
     # mongo.db.words.create_index({ "word_name": "text" })
     # total = mongo.db.words.create_index({'$text': {'$search': db_query }})
-    words = mongo.db.words.find({"word_name": { "$regex": query }}).sort("word_name",-1) 
-    # sort("word_name",-1) sorts ino ascending alphabetical order in search.html
-    words = list(words)
+    #words = mongo.db.words.find({"word_name": { "$regex": query }}).sort("word_name",-1)
+    # sort("word_name",-1) sorts into ascending alphabetical order in search.html
+    #words = list(words)
     # list.sort(word_name)
     # words = mongo.db.words.sort("word_name")
-
+    # mongo.db.words.createIndex({ category_name: "text", word_name: "text", word_definition: "text" })
     # for i in words:
     #     print(i)
-    
-    results = mongo.db.words.find({'$text':{'$search': query}}) # Search the db 
-    results = list(results)
+    # mongo.db.words.create_index({ "$**" : "text" })
+    # results = mongo.db.words.find({'$text':{'$search': query}}) # Search the db 
+    #results = list(results)
     # list.sort(text)
     # results = mongo.db.words.sort("word_name")
     # for i in results:
     #     print(i)
     # print("hhhhh")
-    return render_template('search.html', words=words, query=results) # Pass the results to the view
+    return render_template('search.html',  query=results) # Pass the results to the view
 
     # categories=mongo.db.categories.sort()
                             
