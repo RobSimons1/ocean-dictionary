@@ -108,7 +108,7 @@ def get_search():
     query = request.args.get('q') # Grab the arugments via GET request
     print(query)
     que = {'$regex': re.compile('.*{}.*'.format(query)), '$options': 'i'}
-    results = mongo.db.words.find({ "word_name": que})
+    results = mongo.db.words.find({ "word_name": que })
     # mongo.db.create_index( { name: "text", description: "text" } )
     # mongo.db.words.create_index({ "word_name": "text" })
     # total = mongo.db.words.create_index({'$text': {'$search': db_query }})
