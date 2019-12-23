@@ -4,13 +4,32 @@
 
 <ul>
 {% for que in query |sort(attribute='word_name', case_sensitive=false) %}
-{{ que.word_name }}
-{{ que.category_name, que.word_name, que.word_definition }}
-{% endfor %}
-    <ul>
-    {% for i in words|sort(attribute='word_name', case_sensitive=false) %}
-        {{ i.category_name, i.word_name, i.word_definition }} 
-    {% endfor %}
-     
-    </ul>
+
+            
+             <ul class="collapsible" data-collapsible="accordion">
+        
+        
+        <li>
+            <h4> {{que.word_name}} </h4> 
+            <div class="collapsible-header">
+               <div class="col s3">
+                    <i class="material-icons">expand_more</i>
+                    <a class="waves-effect waves-light btn btn_small">Done</a>
+                    
+                </div>
+   
+                <div class=" word_header col s9">
+                    <strong>{{que.category_name}}</strong> - {{que.word_name}}
+                </div>
+            </div>
+            <div class="collapsible-body">
+                <span>
+                    {{que.word_definition}}
+                </span>
+            </div>
+        </li>
+        {% endfor %}                 
+    </ul>      
+       
 {% endblock %}     
+
