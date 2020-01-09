@@ -19,7 +19,7 @@
 							class="button-collapse"><i class="material-icons">menu</i></a>
 					</div>
 
-					
+
 
 					<div>
 						<ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -30,14 +30,20 @@
 						</ul>
 					</div>
 
-                    <div class="row">
-                    <div id="nav-search" class="col s4 center">
-						<form action="{{ url_for('get_search') }}">
-							<input type="text" id="q" name="q" placeholder="Search">
-							<button type="submit">Search</button>
-						</form>
+					<div class="row">
+						<div id="nav-search" class="col s4 center active">
+							<form action="{{ url_for('get_search') }}">
+                                
+								<input type="text" id="q" name="q" placeholder="Type Word">
+								<button type="submit">Search</button>
+							</form>
+							<form action="{{ url_for('add_word') }}" class="col s12">
+								<button class="btn-floating btn-large halfway-fab waves-effect waves-light blue" type="submit" name="action">Add Word
+                                <i class="material-icons right">playlist_add</i>
+                                </button>
+							</form>
+						</div>
 					</div>
-                    </div>
 
 					<div>
 						<ul class="side-nav" id="mobile-demo">
