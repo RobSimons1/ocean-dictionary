@@ -14,3 +14,11 @@
 nav {
   background-color: #2196F3;
 }
+
+#logo {
+    position: relative;
+}
+
+#nav-search {
+    float: right;
+}
