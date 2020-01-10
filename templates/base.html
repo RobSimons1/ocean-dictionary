@@ -35,7 +35,8 @@
 							<form action="{{ url_for('get_search') }}">
                                 
 								<input type="text" id="q" name="q" placeholder="Type Word">
-								<button type="submit">Search</button>
+								<button class="btn-floating btn-large waves-effect waves-light green" type="submit"><i class="material-icons">search</i>
+                                </button>
 							</form>
 							<form action="{{ url_for('add_word') }}" class="col s12">
 								<button class="btn-floating btn-large halfway-fab waves-effect waves-light blue" type="submit" name="action">Add Word
