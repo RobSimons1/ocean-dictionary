@@ -15,10 +15,17 @@ nav {
   background-color: #2196F3;
 }
 
-#logo {
-    position: relative;
+nav .brand-logo {
+    font-size: 30px;
+    font-weight: bolder;
+    color: purple;
 }
 
-#nav-search {
-    float: right;
+#nav-search .col .s4 .center {
+    float: none;
+    
+}
+
+nav #nav-wrapper {
+    color: blue;
 }

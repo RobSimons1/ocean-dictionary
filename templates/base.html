@@ -13,13 +13,11 @@
 		<nav class="nav-extended">
 			<div class="nav-wrapper">
 				<div class="row">
-					<div id="logo">
-						<a href="{{url_for('show_words')}}" class="brand-logo">Oceanographic Dictionary</a>
+					<div>
+						<a href="{{url_for('show_words')}}" class="brand-logo left">Oceanographic Dictionary</a>
 						<a href="#" data-activates="mobile-demo"
 							class="button-collapse"><i class="material-icons">menu</i></a>
 					</div>
-
-
 
 					<div>
 						<ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -29,23 +27,21 @@
 							<li><a href="{{url_for('get_categories')}}">Manage Categories</a></li>
 						</ul>
 					</div>
-
 					<div class="row">
-						<div id="nav-search" class="col s4 center active">
-							<form action="{{ url_for('get_search') }}">
-                                
+						<form action="{{ url_for('get_search') }}">
+							<button class="btn-floating btn-large waves-effect waves-light green" type="submit"><i class="material-icons">search</i></button>
+							<div id="nav-search" class="col offset-s4 center active">
 								<input type="text" id="q" name="q" placeholder="Type Word">
-								<button class="btn-floating btn-large waves-effect waves-light green" type="submit"><i class="material-icons">search</i>
-                                </button>
-							</form>
-							<form action="{{ url_for('add_word') }}" class="col s12">
-								<button class="btn-floating btn-large halfway-fab waves-effect waves-light blue" type="submit" name="action">Add Word
+						</form>
+							</div>
+					</div>
+					<div>
+						<form action="{{ url_for('add_word') }}" class="col s4 center-align active">
+							<button class="btn-floating btn-large halfway-fab waves-effect waves-light blue" type="submit" name="action">Add Word
                                 <i class="material-icons right">playlist_add</i>
                                 </button>
-							</form>
-						</div>
+						</form>
 					</div>
-
 					<div>
 						<ul class="side-nav" id="mobile-demo">
 							<li><a href="{{url_for('show_words')}}">Home</a></li>
