@@ -11,21 +11,29 @@
     color: blue;
 }
 
-nav {
-  background-color: #2196F3;
-}
-
 nav .brand-logo {
     font-size: 30px;
     font-weight: bolder;
     color: purple;
 }
 
-#nav-search .col .s4 .center {
-    float: none;
-    
+nav {
+  background-color: #2196F3;
 }
 
-nav #nav-wrapper {
-    color: blue;
+.page-footer {
+  background-color: #2196F3;    
 }
+
+/* push footer to bottom of page */
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+/* push footer to bottom of page */
+  main {
+    flex: 1 0 auto;
+  }
+
