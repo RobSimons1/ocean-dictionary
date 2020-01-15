@@ -1,4 +1,5 @@
 {% extends 'base.html' %} {% block content %}
+<div class="container">
 <h3>Add Word</h3>
 <div class="row">
     <form action="{{ url_for('insert_word') }}" method="POST"  class="col s12">
@@ -20,9 +21,7 @@
                 <div class="input-field col s12">
                     <i class="material-icons prefix ">assignment</i>
                     <input id ="word_name" name="word_name" type="text" class="validate">
-                    <label for="icon_prefix">Input Word</label>
-
-               
+                    <label for="icon_prefix">Input Word</label>              
             
 
             <div class="row">
@@ -43,6 +42,7 @@
         </div>
 
     </form>
+</div>
 </div>
 
 {% endblock %}

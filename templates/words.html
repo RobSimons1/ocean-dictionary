@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="container">
 <h3>Browse Words</h3>
      {% for word in words|sort(attribute='word_name', case_sensitive=false) %}
         
@@ -27,7 +28,7 @@
                 </span>
             </div>
         </li>
-        {% endfor %}  
-               
+        {% endfor %}                 
     </ul>
+    </div>
 {% endblock %}   
