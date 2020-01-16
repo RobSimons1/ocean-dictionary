@@ -26,38 +26,42 @@
 							<li><a href="{{url_for('add_word')}}">New Word</a></li>
 							<li><a href="{{url_for('get_categories')}}">Manage Categories</a></li>
 						</ul>
-					</div>							
-				<div>
-					<form action="{{ url_for('add_word') }}" class="col s4 center-align active">
-						<button class="btn-floating btn-large halfway-fab waves-effect waves-light green" type="submit" name="action">Add Word
-                                <i class="material-icons right">playlist_add</i>
+					</div>
+
+					<div>
+						<ul class="side-nav" id="mobile-demo">
+							<li><a href="{{url_for('show_words')}}">Home</a></li>
+							<li><a href="{{url_for('get_words')}}">Browse Words</a></li>
+							<li><a href="{{url_for('add_word')}}">New Word</a></li>
+							<li><a href="{{url_for('get_categories')}}">Manage Categories</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					
+					<a href="{{url_for('show_words')}}" class="brand-logo1 left">Dictionary</a>
+                    <div>
+						<div id="nav-mobile" class="left hide-on-med-and-down">
+							<form action="{{ url_for('add_word') }}" class="col s4 active">
+								<button class="btn-floating btn-large halfway-fab left waves-effect waves-light green" type="submit" name="action">
+                                <i class="material-icons">playlist_add</i>
                                 </button>
+							</form>
+						</div>
+					</div>
+					<form action="{{ url_for('get_search') }}">
+						<div id="nav-search" class="col offset-s3 center active">
+							<input type="text" id="q" name="q" placeholder="Type Word">
+						</div>
+							<button class="btn-floating btn-large waves-effect waves-light green" type="submit"><i class="material-icons">search</i></button>
 					</form>
 				</div>
-				<div>
-					<ul class="side-nav" id="mobile-demo">
-						<li><a href="{{url_for('show_words')}}">Home</a></li>
-						<li><a href="{{url_for('get_words')}}">Browse Words</a></li>
-						<li><a href="{{url_for('add_word')}}">New Word</a></li>
-						<li><a href="{{url_for('get_categories')}}">Manage Categories</a></li>
-					</ul>
-				</div>                
-			</div>
-            <div class="row">
-            <a href="{{url_for('show_words')}}" class="brand-logo1 left">Dictionary</a>
-						<form action="{{ url_for('get_search') }}">							
-							<div id="nav-search" class="col offset-s3 center active">
-								<input type="text" id="q" name="q" placeholder="Type Word">
-						</div>
-                        <button class="btn-floating btn-large waves-effect waves-light green" type="submit"><i class="material-icons">search</i></button>
-                        </form>							
-					</div>
 			</div>
 		</nav>
 	</header>
-    
-    <main>
-	
+
+	<main>
+
 		{% block content %} {% endblock %}
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -69,33 +73,34 @@
             $(".button-collapse").sideNav();
         });
 		</script>
-	
-    </main>
-    <footer class="page-footer">
-          
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
-              </div>
-            </div>
-          
-          <div class="footer-copyright">
-            <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-            </div>
-        </footer>
+
+	</main>
+	<footer class="page-footer">
+
+		<div class="row">
+			<div class="col l6 s12">
+				<h5 class="white-text">Footer Content</h5>
+				<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.
+				</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5 class="white-text">Links</h5>
+				<ul>
+					<li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+					<li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+					<li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+					<li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="footer-copyright">
+			<div class="container">
+				© 2014 Copyright Text
+				<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+			</div>
+		</div>
+	</footer>
 </body>
 
 </html>
