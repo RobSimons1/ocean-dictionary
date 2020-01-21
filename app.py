@@ -131,6 +131,14 @@ def get_search():
     return render_template('search.html',  query=results) # Pass the results to the view
 
     # categories=mongo.db.categories.sort()
+
+@app.route('/get_letters/<letter>') 
+def get_letters(letter): 
+    print(letter) 
+    
+    results = mongo.db.words.find({"word_name": {"$regex": query, "$options": 'i'}})    
+
+    return render_template('search.html',  query=results)
                             
 if __name__ == "__main__":
     app.run(host=os.getenv("IP"),
