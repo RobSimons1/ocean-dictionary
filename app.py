@@ -135,11 +135,12 @@ def get_search():
 @app.route('/get_letters/<letter>') 
 def get_letters(letter): 
     print(letter) 
-    
-    results = mongo.db.words.find({"word_name": {"$regex": query, "$options": 'i'}})    
+        
+    results = mongo.db.words.find({"word_name": {"$regex": letter, "$options": 'i'}})   
 
-    return render_template('search.html',  query=results)
-                            
+    return render_template('searchletter.html', letter=results)
+    print(word_name)
+
 if __name__ == "__main__":
     app.run(host=os.getenv("IP"),
     port=os.getenv("PORT"), debug=True)
