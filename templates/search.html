@@ -6,8 +6,8 @@
 <ul>
 {% for que in query|sort(attribute='word_name', case_sensitive=false) %}
 
-            
-             <ul class="collapsible" data-collapsible="accordion">
+    <div class="row featurette">
+        <ul class="collapsible" data-collapsible="accordion">
         
         
         <li>
@@ -31,6 +31,8 @@
                 </span>
             </div>
         </li>
+         </ul>
+        </div>
         {% endfor %}                 
     </ul>  
 </div>   

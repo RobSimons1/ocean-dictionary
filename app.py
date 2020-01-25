@@ -20,7 +20,7 @@ def show_words():
 
 @app.route('/get_words')
 def get_words():
-    return render_template("words.html", words=mongo.db.words.find().sort("word_name")) 
+    return render_template("words.html", list_of_letters=[1, 2, 3], words=mongo.db.words.find().sort("word_name")) 
     #.sort to alphabetise 
  
 @app.route('/add_word')
