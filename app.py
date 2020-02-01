@@ -3,12 +3,15 @@ from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId 
 import re
-from dotenv import load_dotenv
+from os import path
+if path.exists("env.py"):
+    import env
 
-load_dotenv()
+#load_dotenv()
 
 app = Flask(__name__)
-app.config["MONGO_DBNAME"] = 'ocean_dictionary'
+app.config["MONGODB_NAME"] = 'ocean_dictionary'
+MONGODB_NAME = os.environ.get('MONGODB_NAME') 
 app.config["MONGO_URI"] =os.getenv('MONGO_URI') 
 
 mongo = PyMongo(app)
