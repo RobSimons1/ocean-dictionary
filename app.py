@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, request, url_for, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId 
 import re
@@ -11,8 +11,9 @@ if path.exists("env.py"):
 
 app = Flask(__name__)
 app.config["MONGODB_NAME"] = 'ocean_dictionary'
-MONGODB_NAME = os.environ.get('MONGODB_NAME') 
+MONGODB_NAME = os.environ.get('MONGODB_NAME')
 app.config["MONGO_URI"] =os.getenv('MONGO_URI') 
+app.secret_key = 'my_secret_key'
 
 mongo = PyMongo(app)
 
@@ -35,8 +36,12 @@ def add_word():
 @app.route('/insert_word', methods=['POST'])
 def insert_word():
     words = mongo.db.words
-    words.insert_one(request.form.to_dict())
-    return redirect(url_for('get_words'))  
+    new_word = request.form.get("word_name")
+    if words.count_documents({'word_name': new_word}, limit=1) == 0:
+        words.insert_one(request.form.to_dict())
+    else:
+        flash("This item already exists in the database!")
+    return redirect(url_for('get_words'))
 
       
 @app.route('/edit_word/<word_id>')

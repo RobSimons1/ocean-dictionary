@@ -52,6 +52,8 @@ nav {
 
 .letters {
     font-weight: bolder;
+    font-family: 'Allerta Stencil', cursive;
+    font-size: 25px;
 }   
 
 .card {
