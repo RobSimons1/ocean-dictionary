@@ -90,8 +90,13 @@ def update_category(category_id):
 
 @app.route('/insert_category', methods=['POST'])
 def insert_category():
-    category_doc = {'category_name': request.form.get('category_name')}
-    mongo.db.categories.insert_one(category_doc)
+    category_doc = mongo.db.categories
+    new_category = request.form.get("category_name")
+    #mongo.db.categories.insert_one(category_doc)
+    if category_doc.count_documents({'category_name': new_category}, limit=1) == 0:
+        category_doc.insert_one(request.form.to_dict())
+    else:
+        flash("This item already exists in the database!")    
     return redirect(url_for('get_categories'))
 
 
