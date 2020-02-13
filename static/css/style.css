@@ -5,8 +5,9 @@
 }
 
 ::placeholder {
-  color: red;
+    color: red;
 }
+
 
 .btn_small {
     height: 24px;
