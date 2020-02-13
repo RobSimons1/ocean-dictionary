@@ -4,6 +4,10 @@
     color: #377A59;
 }
 
+::placeholder {
+  color: red;
+}
+
 .btn_small {
     height: 24px;
     width: 60px;
