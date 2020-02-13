@@ -21,10 +21,10 @@
 					</div>
 					<div>
 						<ul id="nav-mobile" class="right hide-on-med-and-down">
-							<li><a href="{{url_for('show_words')}}">Home</a></li>
-							<li><a href="{{url_for('get_words')}}">Browse Words</a></li>
-							<li><a href="{{url_for('add_word')}}">New Word</a></li>
-							<li><a href="{{url_for('get_categories')}}">Manage Categories</a></li>
+							<li><a href="{{url_for('show_words')}}" class="nav-button">Home</a></li>
+							<li><a href="{{url_for('get_words')}}" class="nav-button">Browse Words</a></li>
+							<li><a href="{{url_for('add_word')}}" class="nav-button">New Word</a></li>
+							<li><a href="{{url_for('get_categories')}}" class="nav-button">Manage Categories</a></li>
 						</ul>
 					</div>
 
@@ -43,7 +43,7 @@
 					<div>
 						<div id="nav-mobile" class="left hide-on-med-and-down">
 							<form action="{{ url_for('add_word') }}" class="col s4 active">
-								<button class="btn-floating btn-large halfway-fab left waves-effect waves-light green" type="submit" name="action">
+								<button class="btn-floating btn-large halfway-fab left waves-effect waves-#377A59" type="submit" name="action">
                                 <i class="material-icons">playlist_add</i>
                                 </button>
 							</form>
@@ -53,7 +53,7 @@
 						<div id="nav-search" class="col offset-s3 center active">
 							<input type="text" id="q" name="q" placeholder="Type Word">
 						</div>
-							<button class="btn-floating btn-large waves-effect waves-light green" type="submit"><i class="material-icons">search</i></button>
+							<button class="btn-floating btn-large waves-effect waves-#377A59" type="submit"><i class="material-icons">search</i></button>
 					</form>
 				</div>
 			</div>

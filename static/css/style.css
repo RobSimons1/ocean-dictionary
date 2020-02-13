@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Allerta Stencil:100,200,300,400,500,600,700');
 
+.nav-button {
+    color: #377A59;
+}
+
 .btn_small {
     height: 24px;
     width: 60px;
@@ -17,7 +21,7 @@ nav .brand-logo {
     font-family: 'Allerta Stencil', cursive;
     font-size: 50px;
     font-weight: bolder;
-    color: green;
+    color: #377A59;
     transform: rotate(-10deg);
     margin-top: 20px;
     margin-left: 20px;
@@ -26,16 +30,16 @@ nav .brand-logo {
 nav .brand-logo1 {
     font-size: 30px;
     font-weight: bolder;
-    color: green;   
+    color: #377A59;   
     margin-left: 120px;
 }
 
 nav {
-  background-color: #2196F3;
+  background-color: #B1DAEC;
 }
 
 .page-footer {
-  background-color: #2196F3;    
+  background-color: #B1DAEC;    
 }
 
 /* push footer to bottom of page */
@@ -57,9 +61,17 @@ nav {
 }   
 
 .card {
-    background-color: #507C8F;
+    background-color: #A7D8EC;
 
 }
+
+.card-stacked {
+    background-color: #012F4D;
+}
+
+.card-panel {
+    background-color: #A7D8EC;          
+}        
 
 .word_header {
     font-weight: 970px;
