@@ -4,10 +4,15 @@
     color: #607D8B;
 }
 
+a:hover {
+  background-color: #9FC4D4;
+}
+
+
+
 ::placeholder {
     color: #607D8B;
 }
-
 
 .btn_small {
     height: 24px;
@@ -73,7 +78,11 @@ nav {
 
 .card {
     background-color: #A7D8EC;
+}
 
+h3 {
+    font-weight: bold;
+    font-size: 25px;
 }
 
 .card-stacked {
@@ -81,8 +90,16 @@ nav {
 }
 
 .card-panel {
-    background-color: #A7D8EC;          
-}        
+    background-color: #A7D8EC;  
+    padding: 0px;        
+} 
+
+.card.horizontal .card-stacked .card-content {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 .word_header {
     font-weight: 970px;
