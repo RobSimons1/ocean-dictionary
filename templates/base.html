@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Oceanographic Dictionary</title>
+
 <html>
 
 <head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Oceanographic Dictionary</title>
+
+    <!-- favicon link to favicon-32x32.png displayed in browser tab -->
+    <link rel="icon" type="image/png" href="static/images/favicon-32x32.png" sizes="32x32" />
+
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
@@ -61,99 +70,99 @@
 	</header>
 
 	<main>
-		<div class="container">	
-            <div class="col l1 s1 center">		
-					{% with messages = get_flashed_messages() %}
-                    {% if messages %}
-					{% for message in messages %}
-					<div class="flash">
-                    {{message}}
-                    </div>
-					{% endfor %}
-					{% endif %}
-					{% endwith %}
-				</div>			
+		<div class="container">
+			<div class="col l1 s1 center">
+				{% with messages = get_flashed_messages() %}
+				{% if messages %}
+				{% for message in messages %}
+				<div class="flash">
+					{{message}}
+				</div>
+				{% endfor %}
+				{% endif %}
+				{% endwith %}
+			</div>
 		</div>
 
 		<div class="container">
 			<div class="row">
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^A')}}">Aa</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^A')}}">Aa</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^B')}}">Bb</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^B')}}">Bb</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^C')}}">Cc</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^C')}}">Cc</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^D')}}">Dd</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^D')}}">Dd</a>
 				</div>
 				<div class="letters col l1 l1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^E')}}">Ee</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^E')}}">Ee</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^F')}}">Ff</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^F')}}">Ff</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^G')}}">Gg</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^G')}}">Gg</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^H')}}">Hh</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^H')}}">Hh</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^I')}}">Ii</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^I')}}">Ii</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^J')}}">Jj</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^J')}}">Jj</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^K')}}">Kk</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^K')}}">Kk</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^L')}}">Ll</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^L')}}">Ll</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^M')}}">Mm</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^M')}}">Mm</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^N')}}">Nn</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^N')}}">Nn</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^O')}}">Oo</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^O')}}">Oo</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^P')}}">Pp</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^P')}}">Pp</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^Q')}}">Qu</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^Q')}}">Qu</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^R')}}">Rr</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^R')}}">Rr</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^S')}}">Ss</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^S')}}">Ss</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^T')}}">Tt</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^T')}}">Tt</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^U')}}">Uu</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^U')}}">Uu</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^V')}}">Vv</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^V')}}">Vv</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^W')}}">Ww</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^W')}}">Ww</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^X')}}">Xx</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^X')}}">Xx</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^Y')}}">Yy</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^Y')}}">Yy</a>
 				</div>
 				<div class="letters col l1 s1 center">
-					<a class = "teal-text" href="{{url_for('get_letters', letter='^Z')}}">Zz</a>
+					<a class="teal-text" href="{{url_for('get_letters', letter='^Z')}}">Zz</a>
 				</div>
 			</div>
 		</div>
@@ -185,7 +194,8 @@
 					<li><a class="blue-grey-text text-lighten-2" href="{{url_for('show_words')}}">Home</a></li>
 					<li><a class="blue-grey-text text-lighten-2" href="{{url_for('get_words')}}">Browse Words</a></li>
 					<li><a class="blue-grey-text text-lighten-2" href="{{url_for('add_word')}}">New Word</a></li>
-					<li><a class="blue-grey-text text-lighten-2" href="{{url_for('get_categories')}}">Manage Categories</a></li>
+					<li><a class="blue-grey-text text-lighten-2" href="{{url_for('get_categories')}}">Manage
+							Categories</a></li>
 				</ul>
 			</div>
 		</div>
