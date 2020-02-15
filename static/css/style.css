@@ -85,6 +85,12 @@ h3 {
     font-size: 25px;
 }
 
+h5 {
+    font-weight: bold;
+    font-size: 25px;
+    color: #012F4D;
+}
+
 .card-stacked {
     background-color: #012F4D;
 }
