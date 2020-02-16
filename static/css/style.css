@@ -5,10 +5,22 @@
 }
 
 a:hover {
-  background-color: #9FC4D4;
+    background-color: #9FC4D4;
+    animation: pulse 1s infinite;
+    animation-timing-function: linear;   
 }
 
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1);
+  100% { transform: scale(1); }
+  }
+}
 
+.side-nav {    
+    font-weight: bolder;
+    background-color: #9FC4D4;
+}
 
 ::placeholder {
     color: #607D8B;
@@ -80,13 +92,23 @@ nav {
     background-color: #A7D8EC;
 }
 
+/* h3 is to style Card Title and page headers */
 h3 {
-    font-weight: bold;
+    font-family: 'Allerta Stencil', cursive;
+    font-weight: bolder;
     font-size: 25px;
 }
 
+/* h4 is to style word headings */
+h4 {
+    font-weight: bolder;
+    padding-left: 40px;
+}
+
+/* h5 is to style Headings in Footer */
 h5 {
-    font-weight: bold;
+    font-family: 'Allerta Stencil', cursive;
+    font-weight: bolder;
     font-size: 25px;
     color: #012F4D;
 }
