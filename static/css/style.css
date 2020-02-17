@@ -5,7 +5,7 @@
 }
 
 a:hover {
-    background-color: #9FC4D4;
+    background-color: #9FE3FA;
     animation: pulse 1s infinite;
     animation-timing-function: linear;   
 }
