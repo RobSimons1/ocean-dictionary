@@ -1,84 +1,72 @@
-# Global White Shark Dashboard 
+# Oceanographic Dictionary Web-Application 
 
-This data dashboard is designed to show the various types of attacks on humans by White Sharks globally over a fifty year period between 1968 to 2018.
-Some of these attacks have resulted in fatality with the largest number of attacks during this period occurring in the USA and involving Surfers. 
-The highest recorded number of White Shark attacks during this period occurred in 2015.
+This web-app is designed to allow the user to manipulate the data Oceanographic Dictionary records stored in MongoDB. The user is able to create, 
+locate, display, edit and delete records in line with CRUD functionality. 
 
-The dashboard is easy to use and interactive. The interactivity allows the user to drill down on a selection of synchronised dropdown-selectors, pie charts, 
-composite chart, stacked bar chart, table and bar graph to obtain such details as year, type, country, fatality, sex and age of the victim. The data was 
-obtained from "https://data.opendatasoft.com/explore/dataset/global-shark-attack", which is a robust and API driven data website. This data is for information 
-purposes and will hopefully help us better understand this amazing creatures psychology when it comes to human interactions.
+The web-app is easy to use and allows the user to input their own words, categories and definitions into the database. The user can search for 
+existing words in the database, as well as display existing and new words. Also, the user is able to edit current words and categories, as well as 
+delete them. 
 
-The link for the dashboard is: 
-*https://robsimons1.github.io/global-white-shark-attack-dashboard/*
+The purpose of the web-app is to ultimately build a large database of Oceanographic words, categories and definitions that will allow people to better 
+understand the oceanic environment and all of the associated elements.
+
+The link for the app is: 
+
+*https://ocean-dictionary-flask-mongo.herokuapp.com/*
 
 ## UX
 
-In order to make the user experience as easy and enjoyable as possible I opted for a simple Single-Page Application (SPA) dashboard that utilises various 
-dropdown-selectors, pie charts, composite chart, stacked bar chart, table and bar graph. Also, headings, paragraphs and sentences that inform the user of 
-certain facts and guide the user through the dashboard. Refresh buttons are located in the Navbar, Centre and Footer of the page, so that the user is 
-able to navigate the osite and reset / control the site functionality. 
+In order to make the user experience as easy and enjoyable as possible I opted for a simple looking site that is easy to navigate 
+using the navigation bar buttons (Home, Browse Words, New Word and Manage Categories). There is also a search bar within the Navbar 
+that the user can type in any word to search, as well as individual letters that are themselves links to all words beginning with the 
+selected letter. The user is also able to add a new word using the floating green button to the left of the Navbar, as well as utilise 
+links provided in the card placed on the right of the homepage (Words, New Word and Categories). Additionally, there are a selection of 
+links in the footer that will assist the user to easily navigate the pages. A paragraph in the center of the Homepage explains what the
+web-app is about.
 
-The original concept for the dashboard page can be seen in the *supporting_docs folder* under *wireframe1_global_white_shark_attacks.png* (original idea) and 
-*wireframe2_global_white_shark_attacks.png*, which is the latest idea for the structure of the dashboard. These were created in Balsamiq. There are numerous 
-changes since wieframe1, mainly due to learning more about the capabilities of d3.js, dc.js and crossfilter.  
+Once the user browses a word using any of the available search facilities, they can then see the category to which that word belongs, as 
+well view the drop down definition by pressing the button. There are also button options to edit or delete the word. A warning will present 
+it's self to the user if they press the delete button.
 
-The dashboard is aimed at at users who share an interest in sharks, particularly White Sharks and would like to see some easily accessible graphical 
-data about White Shark attacks on humans. The user will be able to interactively use all of the dropdown-selectors pie charts, table and graphs. If 
-sections of the charts are hovered over then the user will see a count of attacks relating specifically to that section (e.g. Country, Age Range). If the 
-user clicks on any section of a chart (e.g. South Africa in the Country Pie Chart) then every other chart will synchroniously adjust to present corresponding 
-data that relates to the section that was clicked. This can be done numerous times, with the user clicking on any of the charts sections to drill down 
-into specific information that is required. Refresh Buttons are located in the Navbar, Centre and Footer of the dashboard that will reset all of the 
-charts and table.
+To add a word the user is taken to the Add Word page where they can select an appropriate category, input the word and input the definition.
+the user then presses the Add Word button to submit the information to the database. The operation can also be cancelled using the cancel button.
+Either action will return the user to the Browse Words page that is sorted in alphabetical order.
 
-The information available to the user is:
+The Manage Categories page allows the user to view all categories in alphabetical order and then either delete or edit an existing category 
+using the buttons provided or add a new Category that will be submitted to the database. If editing the category, the user has the option to 
+either save their changes or cancel the operation. Again, if the delete button is pressed a warning message will be displayed. 
 
-* Two short informative paragraphs giving facts about the White Sharks attacks on humans, history and population.
-* Year the attack took place. This is a fifty year range between 1968 - 2018.
-* Type of attack. Whether this was provoked, unprovoked or involved a boat.
-* Country the attack took place. In the last fifty years there have been recorded White Shark attacks in 19 different countries and the Atlantic Ocean.
-* Activity that the victim was doing at the time of the attack.
-* Sex of the victim.
-* Age of the victim.
-* Whether the attack was fatal or not.
+The original concepts for the web-app pages can be seen in the *supporting_docs folder* under *wireframe1_oceanic_dictionary_home.png*, 
+*wireframe2_ oceanic_dictionary_browse_words.png*, *wireframe3_ oceanic_dictionary_new_word.png* and *wireframe3_ oceanic_dictionary_manage_categories.png*. 
+These were created in Balsamiq. There are numerous changes since these  wireframes, mainly due to learning more about the capabilities 
+of Python, Flask and MongoDB. There is also a database scehma showing the original idea for the project.
+
+The web-app is aimed at users who share an interest in the ocean and oceanographic words, particularly those who would like to understand 
+the spelling or definition of a word, or to which oceanographic category it belongs. 
 
 ## Features
 
 ### Existing Features
 
-The choice of features, buttons, selectors, charts and table available to the user are:
+The choice of features, links and buttons available to the user are:
 
-* **Nav Bar –** Contains homepage link and alternative title (50 Year Global White Shark Attacks Data Dashboard) of dashboard for use on smaller devices (e.g. iPhone). 
-This is because the title and image below the Nav Bar does not show particularly well on smaller devices and elongates. The Nav Bar also has a 
-"Refresh Charts" button that will reset all of the charts on the dashboard. Also, a short sentence describing how to control the dashboard is floated 
-to the right of the Nav Bar stating "Hover or Click on Charts to select data for analysis" to assist the user with the design functionality.   
-* **Refresh Charts Buttons-** "Refresh Charts" buttons are conveniently located in the Nav Bar, Centre and Footer of the dashboard that will reset 
-the page and return the user to the position that they were located on the dashboard.
-* **Header Title Image –** The image displays a surfer encountering a wave with the silhouette of a white shark travelling past. The image represents the 
-the most common type of attack in the last fifty years, which are those that involve surfers. The image also displays the title of the dashboard which is 
-designed in the colours of a White Shark (grey on top and white underneath). 
-* **Fatal Dropdown-Selector -** This allows the user to easily view the count of fatalities, whether yes, no or unknown. If the user clicks
-* on a Y, N or unknown, the entire dashboard will update to show information relating to that option.
-* **Country Dropdown-Selector -** This allows the user to easily view the count of attacks in the all of the countries involved. If the user clicks
-* on a specific country, the entire dashboard will update to show information relating to that country. 
-* **Type Dropdown-Selector -** This allows the user to easily view the count of incident type from Boat, Invalid, Provoked and Unprovoked.
-* **Year Dropdown-Selector -** This allows the to choose a specific year to analyse, which is not a function available by clicking on the composite chart. 
-* **Activity Dropdown-Selector -** This allows the user to choose a specific activity that the victim was partaking in at the time of the attack.
-* **Country Pie Chart -** This pie chart displays the countries in which the attacks have occurred and the number of attacks per country. If the user clicks
-on a specific country, the entire dashboard will update to show information relating to that country.
-* **Age Pie Chart -** This pie chart displays the ages of the victims that are split in to ten year ranges. The ranges were chosen to reduce the number of 
-slices in the chart. If the user clicks on a specific age range, the entire dashboard will update to show information relating to that age range.
-* **Fatality Pie Chart -** This pie chart allows the user to easily view the count of fatalities, whether yes, no or unknown in a graphical format.
-* **Country and Year Composite Line Graph -** This chart allows the user to visualise the countries in which the attacks occurred and the year that they occurred
-in. If the user hovers on any of the data points, the relative information will be be presented. A total line has been added to show the user the global total 
-for each year in the fifty year period.
-* **Fifty Year Data Table -** This table shows the user the attack events in a tabulated format. The attacks are shown in descending chronological order and the 
-table displays all of the information that is available on the dashboard. The easy to use "Last" and "Next" buttons allow the user to browse through the data available.
-The table is also interactive and will update in accordance with selections made in other charts.
-* **Type / Fatality Stacked Bar Chart -** This stacked bar chart shows the Type of attack (e.g. Provoked, Unprovoked, Boat) and whether or not the attack resulted
-in a fatality. The chart is interactive and will respond in accordance with sections clicked or other chart selections.
-* **Activity Bar Chart -** This bar chart displays the specific activity that the victim was partaking in at the time of the attack. The chart is interactive and 
-will respond in accordance with sections clicked or other chart selections. 
+* **Nav Bar –** Contains homepage link in the title of the page that is animated and highlited when the user hovers on it to draw atttention to 
+the page title. Below the title is a floating Add Word button which will direct the user to the Add Word page. In the centre of the Navbar is a 
+Search bar that the user is able to type any word in to and search the database, this is highlighted by the green search button. The search bar 
+will bring up all words related to the specified search that are in the database. The Navbar links that are Home, Browse Words, New Word and Manage 
+Categories. Direct the user to these specific pages. The links are hilighted and pulse when they are hovered on to make it clear to the user that they are links.
+
+* **Side Nav Bar –** This becomes available on smaller screen types and is present in the form of the hamburger style menu icon in the top left 
+corner of the Navbar. Once the icon is clicked the Side Navbar presents itself with all the links that are hidden in smaller view (e.g. Home, 
+Browse Words, New Word and Manage Category) that direct the user to the specified page. The links are highlighted and pulse when hovered on  
+to make it clear to the user that they are links.
+
+* **Individual Letter Links –** Each letter of the alphabet is represented by it's upper and lower case character. The individual letters are 
+highlighted when hovered over to make the user aaware that they are links. Once clicked the user will be directed to a page that shows all words 
+beginning with the specified letter listed in alphabetical order. Form there the user can see the associated category and definition and edit or 
+delete the words.
+
+
  
 
 ### Features left to implement
