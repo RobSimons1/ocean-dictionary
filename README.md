@@ -105,11 +105,18 @@ they will receive an error message stating "This item already exists in the data
 * **Categories –** When the user selects Manage Categories from the Navbar or any of the Categories links, they are taken to the Categories page. This 
 page displays all of the existing categories in alphabetical order. 
 
-* **Add Category Button –** This button directs the ser to a page with a single line form where they can 
+* **Add Category Button –** This button directs the user to a page with a single line form where they can input the name of a new category. Once the 
+form is completed the user can submit the category to the database using the Add Category button or cancel the operation using the Cancel button. 
+Either button will take the user back to the Categories page. If the user inputs a category that already exists in the database they will receive an 
+error message stating "This item already exists in the database". 
 
-* **Delete Category Button –**
+* **Delete Category Button –** The Delete Button to the left of each individual category on the Categories page gives the user the opportunity to delete 
+the category from the database completely. Once pressed a message is diplayed asking the user if they are sure they want to delete this category?
 
-* **Edit Category Button –**
+* **Edit Category Button –** The Edit button to te far left of each individual category on the Categories page takes the user to the Edit Category page. 
+Here the user is shown the existing category from the database. The user is able to edit this detail by then pressing the Edit Category button. There is 
+also an opportinity to cancel the operation by pressing the Cancel button. Once the user either edits the category or cancels 
+the operation, they are taken back to the Categories page. 
 
 
 
