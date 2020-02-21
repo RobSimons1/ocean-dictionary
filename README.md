@@ -54,7 +54,8 @@ The choice of features, links and buttons available to the user are:
 the page title. Below the title is a floating Add Word button which will direct the user to the Add Word page. In the centre of the Navbar is a 
 Search bar that the user is able to type any word in to and search the database, this is highlighted by the green search button. The search bar 
 will bring up all words related to the specified search that are in the database. The Navbar links that are Home, Browse Words, New Word and Manage 
-Categories. Direct the user to these specific pages. The links are hilighted and pulse when they are hovered on to make it clear to the user that they are links.
+Categories. Direct the user to these specific pages. The links are hilighted and pulse when they are hovered on to make it clear to the user that 
+they are links.
 
 * **Side Nav Bar –** This becomes available on smaller screen types and is present in the form of the hamburger style menu icon in the top left 
 corner of the Navbar. Once the icon is clicked the Side Navbar presents itself with all the links that are hidden in smaller view (e.g. Home, 
@@ -66,16 +67,61 @@ highlighted when hovered over to make the user aaware that they are links. Once 
 beginning with the specified letter listed in alphabetical order. Form there the user can see the associated category and definition and edit or 
 delete the words.
 
+* **Wave Picture –** The picture of the wave is the basis for all the colours used in the web-app. All colours utilised are colour picked from 
+the wave picture.
 
- 
+* **Homepage Paragraph –** This paragraph informs the user of the web-apps purpose by briefly explaining the many things that can be found in 
+our oceans.
+
+* **Basic Card –** The card has a second explanation of the web-app and tells the user what they are able to to do with regards to the functions 
+available (e.g. browse, search, edit and delete words. Also, categories can be added, managed and edited). There are three links available to the 
+user on the card, which are Words, New Word and Categories.
+
+* **Footer –** The Footer has yet another brief paragraph explainin the web-app and its functionality, as well as links to Home, Browse Words, 
+New Word and Manage Categories. These are available in the Footer on every ppage of the web-app.
+
+* **Word Results –** When the user searches for a word using the search bar or the individual letters they are dircted to the Word Results page 
+that will show all resultant words. Each word has it's own box and within the box is displayed the word in bold, as well as the associated Category.
+then the word again.
+
+* **Definition Button –** The large definition button and dropdown selector to its left in each individual word box will display the words definition 
+in the drop-down when selected. This is so that the user can choose if they wish to see certain definitions and not all are displayed on screen at 
+once. The button pulses when hovered on.
+
+* **Edit Word Button –** The Edit button in each individual word box takes the user to the Edit Word page. Here the user is shown the existing details 
+of the word from the database (e.g. Word Category, Input Word and Input Definition). The user is able to edit any of these details by then pressing 
+the Edit Word button. There is also an opportinity to cancel the operation by pressing the Cancel button. Once the user either edits the word or cancels 
+the operation, they are taken back to the Browse Words page. 
+
+* **Delete Word Button –** The Delete Button in each individual word box gives the user the opportunity to delete the word and associated category from 
+the database completely. Once pressed a message is diplayed asking the user if they are sure they want to delete this word?
+
+* **Add Word –** When the user selects the Add Word green button in te Navbar or New Word from any of the links they will be taken to the Add Word page 
+where they are given a blank form to fill in beginning with choosing a word category from the dropdown list, then inputting the word, followed by 
+inputting the definition. Once the form is completed the user can submit the word to the database using the Add Word button or cancel the operation 
+using the Cancel button. Either button will take the user back to the Browse Words page. If the user inputs a word that already exists in the database 
+they will receive an error message stating "This item already exists in the database".
+
+* **Categories –** When the user selects Manage Categories from the Navbar or any of the Categories links, they are taken to the Categories page. This 
+page displays all of the existing categories in alphabetical order. 
+
+* **Add Category Button –** This button directs the ser to a page with a single line form where they can 
+
+* **Delete Category Button –**
+
+* **Edit Category Button –**
+
+
 
 ### Features left to implement
 
-* Use entire "https://data.opendatasoft.com/explore/dataset/global-shark-attack" data that includes all types of shark and more details.
+* View each category and associated words separately by clicking category name?
 
-* Elaborate on Date and Time of day to see if there are any correlations.
+* User can curretly input upper and lower case versions of the same word / category?
 
-* Connect dashboard directly to API. This was originally attempted, but proved too unmanageable when it came to trying to keep the dashboard looking simple.
+* Words to be spilt up into there own individual letter and not one continous list of all words in alphabeitical order.
+
+* Voting on words Page?
 
 ## Technologies Used
 The languages, frameworks, libraries and other tools utilised for building this data dashboard are:
