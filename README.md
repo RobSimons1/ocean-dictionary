@@ -129,7 +129,15 @@ the operation, they are taken back to the Categories page.
 * Voting on words Page?
 
 ## Technologies Used
-The languages, frameworks, libraries and other tools utilised for building this data web-app are:
+The languages, frameworks, libraries and other tools utilised for building this web-app are:
+
+* **Mongo DB -** 
+
+* **Flask -**
+
+* **Python 3.1 -** 
+
+* **Heroku -** This is a cloud based application platform that allows deployment of an application to the web and connection to the database. https://heroku.com/
 
 * **HTML 5 -** The web-app uses HTML5 as a fundamental basis for building the web-app. Where possible semantic HTML is used to give the user a better understanding.
 
