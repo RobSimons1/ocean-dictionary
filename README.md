@@ -118,8 +118,6 @@ Here the user is shown the existing category from the database. The user is able
 also an opportinity to cancel the operation by pressing the Cancel button. Once the user either edits the category or cancels 
 the operation, they are taken back to the Categories page. 
 
-
-
 ### Features left to implement
 
 * View each category and associated words separately by clicking category name?
@@ -131,29 +129,23 @@ the operation, they are taken back to the Categories page.
 * Voting on words Page?
 
 ## Technologies Used
-The languages, frameworks, libraries and other tools utilised for building this data dashboard are:
+The languages, frameworks, libraries and other tools utilised for building this data web-app are:
 
-*	**HTML 5 -** The dashboard uses HTML5 as a fundamental basis for building the dashboard. Where possible semantic HTML is used to give the viewer a better understanding.
+* **HTML 5 -** The web-app uses HTML5 as a fundamental basis for building the web-app. Where possible semantic HTML is used to give the user a better understanding.
 
-*	**CSS3 -** The dashboard uses CSS3 for styling of all elements within the website. It is linked from the page to the *style.css* file and is used for all content, including such as layout of colours, navbar, background, images etc.
+* **CSS3 -** The web-app uses CSS3 for styling of elements within the website. It is linked from the page to the *style.css* file.
 
-*	**Bootstrap 3.7.6. -** The open-source Bootstrap framework has been used to implement the layout of the dashboard. Bootstrap is also utilised to accommodate the responsive and mobile first design of the dashboard. https://getbootstrap.com/
+* **Materialize 0.100.2 -** The open-source Materialize framework has been used to implement the layout of the web-app. Materialize is also utilised to accommodate the responsive and mobile first design of the web-app. http://archives.materializecss.com/0.100.2/about.html
 
-* **JavaScript -** The dashboard uses Javascript to provide dynamic interactivity, as it is a full-fledged versatile programming language.
+* **JavaScript -** The web-app uses Javascript to provide dynamic interactivity, as it is a full-fledged versatile programming language.
 
-* **jQuery -** The dashboard uses jQuery, as it simplifies a lot of complicated tasks from JavaScript, such as AJAX calls and DOM manipulation. jquery.com/jquery-3.4.1
+* **jQuery -** The web-app uses jQuery, as it simplifies a lot of complicated tasks from JavaScript, such as AJAX calls and DOM manipulation. jquery.com/jquery-3.4.1
 
-* **Crossfilter -** The graphs and charts on the dashboard are all linked using crossfilter, which manages the data behind the graphs and charts, allowing interaction with coordinated views and functioning. It synchronises all the charts when used.
+* **Gitpod -** Gitpod is a cloud-based integrated development environment (IDE) that has been used to write, run, and debug the code used for the web-app. https://www.gitpod.io/
 
-* **DC.js -** The dashboard uses DC.js for data visualisation and analysis. 
+* **GitHub -** GitHub has been used for version control of the code by using Git functions in the control panel. Github was utilised frequently during the development of the web-app.  https://github.com/
 
-* **D3.js -** The D3.js library allows manipulation of elements on the dashboard in the context of the dataset.
-
-*	**Cloud9 AWS (Amazon) -** Cloud9, a cloud-based integrated development environment (IDE) that has been used to write, run, and debug the code used for the dashboard. https://c9.io/rsimons
-
-*	**GitHub -** GitHub has been used for version control of the code by using Git functions in the control panel. Github was utilised frequently during the development of the dashboard.  https://github.com/
-
-*	**Google Fonts-** The dashboard uses Google fonts to accentuate certain text. https://fonts.google.com/
+* **Google Fonts-** The dashboard uses Google fonts to accentuate certain text. https://fonts.google.com/
 
 ## Testing
 
