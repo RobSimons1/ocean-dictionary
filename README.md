@@ -126,7 +126,7 @@ the operation, they are taken back to the Categories page.
 
 * Words to be spilt up into there own individual letter and not one continous list of all words in alphabeitical order.
 
-* Voting on words Page?
+* Voting on words Page? Difficult without user login credentials.
 
 ## Technologies Used
 The languages, frameworks, libraries and other tools utilised for building this web-app are:
@@ -137,33 +137,46 @@ The languages, frameworks, libraries and other tools utilised for building this 
 
 * **Python 3.1 -** 
 
-* **Heroku -** This is a cloud based application platform that allows deployment of an application to the web and connection to the database. https://heroku.com/
+* **Jinja -** 
 
-* **HTML 5 -** The web-app uses HTML5 as a fundamental basis for building the web-app. Where possible semantic HTML is used to give the user a better understanding.
+* **flask_pymongo -** 
+
+* **Heroku -** This is a cloud based application platform that allows deployment of an application to the web and connection to the database. 
+https://heroku.com/
+
+* **HTML 5 -** The web-app uses HTML5 as a fundamental basis for building the web-app. Where possible semantic HTML is used to give the user a 
+better understanding.
 
 * **CSS3 -** The web-app uses CSS3 for styling of elements within the website. It is linked from the page to the *style.css* file.
 
-* **Materialize 0.100.2 -** The open-source Materialize framework has been used to implement the layout of the web-app. Materialize is also utilised to accommodate the responsive and mobile first design of the web-app. http://archives.materializecss.com/0.100.2/about.html
+* **Materialize 0.100.2 -** The open-source Materialize framework has been used to implement the layout of the web-app. Materialize is also 
+utilised to accommodate the responsive and mobile first design of the web-app. http://archives.materializecss.com/0.100.2/about.html
 
 * **JavaScript -** The web-app uses Javascript to provide dynamic interactivity, as it is a full-fledged versatile programming language.
 
-* **jQuery -** The web-app uses jQuery, as it simplifies a lot of complicated tasks from JavaScript, such as AJAX calls and DOM manipulation. jquery.com/jquery-3.4.1
+* **jQuery -** The web-app uses jQuery, as it simplifies a lot of complicated tasks from JavaScript, such as AJAX calls and DOM manipulation. 
+jquery.com/jquery-3.4.1
 
-* **Gitpod -** Gitpod is a cloud-based integrated development environment (IDE) that has been used to write, run, and debug the code used for the web-app. https://www.gitpod.io/
+* **Gitpod -** Gitpod is a cloud-based integrated development environment (IDE) that has been used to write, run, and debug the code used for 
+the web-app. https://www.gitpod.io/
 
-* **GitHub -** GitHub has been used for version control of the code by using Git functions in the control panel. Github was utilised frequently during the development of the web-app.  https://github.com/
+* **GitHub -** GitHub has been used for version control of the code by using Git functions in the control panel. Github was utilised frequently 
+during the development of the web-app.  https://github.com/
 
 * **Google Fonts-** The dashboard uses Google fonts to accentuate certain text. https://fonts.google.com/
 
 ## Testing
 
-Various methods of testing have been carried out to test the code of the dashboard. Continuous testing throughout the development has been implemented to check the quality of the code. 
-The aim is to check the functionality of the code on different devices (mobile, tablet, desktop) with an overall perspective of responsive and mobile first design.
-The site has been viewed and tested in **Firefox**, **Safari**, **Chrome** **Microsoft Edge** and **Explorer**. The devices used to test the site are **iPhone 5/SE**, **Samsung Galaxy**, 
-**iPad**, **iPad Pro** **iPhone X**, **iPhone 6/7/8**, **Pixel 2**, **Pixel 2 XL** **Hudle2** and **Samsung laptop**. 
+Various methods of testing have been carried out to test the code of the web-app. Continuous testing throughout the development has been implemented to 
+check the quality of the code. The aim is to check the functionality of the code on different devices (mobile, tablet, desktop) with an overall perspective 
+of responsive and mobile first design. The site has been viewed and tested in **Firefox**, **Safari**, **Chrome** **Microsoft Edge** and **Explorer**. The 
+devices used to test the site are **iPhone 5/SE**, **Samsung Galaxy**, **iPad**, **iPad Pro** **iPhone X**, **iPhone 6/7/8**, **Pixel 2**, **Pixel 2 XL** 
+**Hudle2** and **Samsung / Lenovo / HP laptop**. 
 
-The final desktop wireframe for the dashboard can be seen in the *supporting_docs folder* under *wireframe2_global_white_shark_attacks.png* and this was used initially to plan the dashboard and build around. 
-The opinions of numerous people including chat forums were asked in the final stages of the project.
+The final database schema and desktop wireframes for the web-app can be seen in the *supporting_docs folder* under *wireframe1_oceanic_dictionary_home.png*, 
+*wireframe2_ oceanic_dictionary_browse_words.png*, *wireframe3_ oceanic_dictionary_new_word.png* and *wireframe3_oceanic_dictionary_manage_categories.png*. 
+These wireframes and database schema were used initially to plan the web-app and build around The opinions of numerous people including my mentor, friends, 
+tutors, chat forums and such like, whom were asked during various stages of the project.
 
 The main basic functions of the dashboard that required rigorous testing in different scenarios are listed below.
 
