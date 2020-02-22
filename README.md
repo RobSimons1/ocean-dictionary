@@ -36,10 +36,11 @@ The Manage Categories page allows the user to view all categories in alphabetica
 using the buttons provided or add a new Category that will be submitted to the database. If editing the category, the user has the option to 
 either save their changes or cancel the operation. Again, if the delete button is pressed a warning message will be displayed. 
 
-The original concepts for the web-app pages can be seen in the *supporting_docs folder* under *wireframe1_oceanic_dictionary_home.png*, 
-*wireframe2_ oceanic_dictionary_browse_words.png*, *wireframe3_ oceanic_dictionary_new_word.png* and *wireframe3_ oceanic_dictionary_manage_categories.png*. 
-These were created in Balsamiq. There are numerous changes since these  wireframes, mainly due to learning more about the capabilities 
-of Python, Flask and MongoDB. There is also a database scehma showing the original idea for the project.
+The original concepts for the web-app pages can be seen in the *supporting_docs folder* under *oceanic_dictionary_database_schema.png*, 
+*wireframe1_oceanic_dictionary_home.png*, *wireframe2_ oceanic_dictionary_browse_words.png*, *wireframe3_ oceanic_dictionary_manage_categories.png* 
+and unused *wireframe4_ oceanic_dictionary_manage_categories.png*. These were created in Balsamiq. There are numerous changes since these  wireframes, 
+mainly due to learning more about the capabilities of Python, Flask and MongoDB. There is also a database scehma showing the original idea 
+for the project.
 
 The web-app is aimed at users who share an interest in the ocean and oceanographic words, particularly those who would like to understand 
 the spelling or definition of a word, or to which oceanographic category it belongs. 
@@ -128,6 +129,8 @@ the operation, they are taken back to the Categories page.
 
 * Voting on words Page? Difficult without user login credentials.
 
+* Could not create Text Index?
+
 ## Technologies Used
 The languages, frameworks, libraries and other tools utilised for building this web-app are:
 
@@ -138,8 +141,6 @@ The languages, frameworks, libraries and other tools utilised for building this 
 * **Python 3.1 -** 
 
 * **Jinja -** 
-
-* **flask_pymongo -** 
 
 * **Heroku -** This is a cloud based application platform that allows deployment of an application to the web and connection to the database. 
 https://heroku.com/
@@ -155,7 +156,7 @@ utilised to accommodate the responsive and mobile first design of the web-app. h
 * **JavaScript -** The web-app uses Javascript to provide dynamic interactivity, as it is a full-fledged versatile programming language.
 
 * **jQuery -** The web-app uses jQuery, as it simplifies a lot of complicated tasks from JavaScript, such as AJAX calls and DOM manipulation. 
-jquery.com/jquery-3.4.1
+https://www.jquery.com/jquery-3.4.1
 
 * **Gitpod -** Gitpod is a cloud-based integrated development environment (IDE) that has been used to write, run, and debug the code used for 
 the web-app. https://www.gitpod.io/
@@ -173,21 +174,27 @@ of responsive and mobile first design. The site has been viewed and tested in **
 devices used to test the site are **iPhone 5/SE**, **Samsung Galaxy**, **iPad**, **iPad Pro** **iPhone X**, **iPhone 6/7/8**, **Pixel 2**, **Pixel 2 XL** 
 **Hudle2** and **Samsung / Lenovo / HP laptop**. 
 
-The final database schema and desktop wireframes for the web-app can be seen in the *supporting_docs folder* under *wireframe1_oceanic_dictionary_home.png*, 
-*wireframe2_ oceanic_dictionary_browse_words.png*, *wireframe3_ oceanic_dictionary_new_word.png* and *wireframe3_oceanic_dictionary_manage_categories.png*. 
-These wireframes and database schema were used initially to plan the web-app and build around The opinions of numerous people including my mentor, friends, 
-tutors, chat forums and such like, whom were asked during various stages of the project.
+The final database schema and desktop wireframes for the web-app can be seen in the *supporting_docs folder* under *oceanic_dictionary_database_schema.png*, 
+*wireframe1_oceanic_dictionary_home.png*, *wireframe2_ oceanic_dictionary_browse_words.png*, *wireframe3_ oceanic_dictionary_manage_categories.png* 
+and unused *wireframe4_ oceanic_dictionary_manage_categories.png*. These wireframes and database schema were used initially to plan the web-app and build 
+around The opinions of numerous people including my mentor, friends, tutors, chat forums and such like, whom were asked during various stages of the project.
 
-The main basic functions of the dashboard that required rigorous testing in different scenarios are listed below.
+The main basic functions of the web-app that required rigorous testing in different scenarios are listed below.
 
-*	**Main Navigation** 
-    * Hover mouse over all graphs and charts to ensure that they show the count of that particular section. Every pie-chart section and bar  or line should 
-      function in this way.
-    * Refresh chart buttons were tested to ensure that the user can refresh the page and where possible is returned to the nearest location that they were previously analysing.
-    * Table `Last` and `Next` buttons were rigorously tested to ensure that they function correctly.
-    * Once clicked the section of each graph or chart should be highlighted and all other graphs and charts and the table should conform and adjust to 
-      to this selection. This feature was heavily tested so that the user can analyse specific information easily.
-    * All of the drop down selectors were thoroughly tested so that they diplay the correct information.
+*	**Navbar** 
+    * All Navbar links and buttons are coded within the Header section of the base.html with associated Python functions set up in app.py. 
+    * Check Title link words (Oceanographic and Dictionary) return user to Homepage in every instance by ensuring that the index (/show_words) page is 
+    returned to. This is valid for both the words 'Oceanographic' and 'Dictionary', as thay are split across two separate rows. 
+    * Green `Add Word` button is configured to redirect the user to the Add Word page. Verified the link and left side positioning in all browsers and 
+    screen sizes. 
+    * The Search Bar required rigourous testing due to the varoius ways the words in Mongo DB could be accessed and displayed (See Issues List).
+    * Green magnifying glass icon `Search` button next to the search bar activates the entry into the Search Bar. This has been tested and affixed in place 
+    to maintain its funcionality in all browsers and screen sizes.
+    * The Navbar 'Home', 'Browse Words', 'New Word' and 'Manage Categories' buttons....
+    * The Individual alphabetical letters are situated below the NavBar, but still 
+    
+
+*	**Navbar**     
 
 *	**Responsive / Mobile First design** 
     * The dashboard page has a **Header**; **Main Section** and **Footer**. These needed to display correctly accross 
