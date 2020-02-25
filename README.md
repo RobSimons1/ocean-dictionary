@@ -168,12 +168,6 @@ during the development of the web-app.  https://github.com/
 
 ## Testing
 
-Various methods of testing have been carried out to test the code of the web-app. Continuous testing throughout the development has been implemented to 
-check the quality of the code. The aim is to check the functionality of the code on different devices (mobile, tablet, desktop) with an overall perspective 
-of responsive and mobile first design. The site has been viewed and tested in **Firefox**, **Safari**, **Chrome** **Microsoft Edge** and **Explorer**. The 
-devices used to test the site are **iPhone 5/SE**, **Samsung Galaxy**, **iPad**, **iPad Pro** **iPhone X**, **iPhone 6/7/8**, **Pixel 2**, **Pixel 2 XL** 
-**Hudle2** and **Samsung / Lenovo / HP laptop**. 
-
 The final database schema and desktop wireframes for the web-app can be seen in the *supporting_docs folder* under *oceanic_dictionary_database_schema.png*, 
 *wireframe1_oceanic_dictionary_home.png*, *wireframe2_ oceanic_dictionary_browse_words.png*, *wireframe3_ oceanic_dictionary_manage_categories.png* 
 and unused *wireframe4_ oceanic_dictionary_manage_categories.png*. These wireframes and database schema were used initially to plan the web-app and build 
@@ -184,27 +178,52 @@ The main basic functions of the web-app that required rigorous testing in differ
 *	**Navbar** 
     * All Navbar links and buttons are coded within the Header section of the base.html with associated Python functions set up in app.py. 
     * Check Title link words (Oceanographic and Dictionary) return user to Homepage in every instance by ensuring that the index (/show_words) page is 
-    returned to. This is valid for both the words 'Oceanographic' and 'Dictionary', as thay are split across two separate rows. 
+      returned to. This is valid for both the words 'Oceanographic' and 'Dictionary', as thay are split across two separate rows. 
     * Green `Add Word` button is configured to redirect the user to the Add Word page. Verified the link and left side positioning in all browsers and 
-    screen sizes. 
+      screen sizes. 
     * The Search Bar required rigourous testing due to the varoius ways the words in Mongo DB could be accessed and displayed (See Issues List).
     * Green magnifying glass icon `Search` button next to the search bar activates the entry into the Search Bar. This has been tested and affixed in place 
-    to maintain its funcionality in all browsers and screen sizes.
-    * The Navbar 'Home', 'Browse Words', 'New Word' and 'Manage Categories' buttons....
-    * The Individual alphabetical letters are situated below the NavBar, but still 
-    
+      to maintain its funcionality in all browsers and screen sizes.
+    * The Navbar `Home`, `Browse Words`, `New Word` and `Manage Categories` buttons have been extensively tested to rediriect the user to the relevant page.
+    * The Side-Nav buttons of `Home`, `Browse Words`, `New Word` and `Manage Categories` have been extensively tested to rediriect the user to the relevant 
+      page.
 
-*	**Navbar**     
+*	**Footer** 
+    * The Footer links of `Home`, `Browse Words`, `New Word` and `Manage Categories` have all been extensively tested to redirect the user to the relevant page.
+    * the `More Links` button is where links to external pages will be placed (e.g. Facebook, Twitter etc.) (See Issues List).
+
+*	**Main base.html section**    
+    * The Individual alphabetical letters are situated below the NavBar, but still appear on every page of the web-app. Each letter has been tested numerous 
+      times to ensure that the functionality is correct and brings up all words begininng with the relevant letter, regardless of whether the word stored in the 
+      database begins with an upper or lower case character.
+    * A flashed message appears `This item aleady exists in the database` when a user inputs a word or category that is already in the database. This has been 
+      tested and works provided that spelling and capitalisation of letters matches exactly what is all ready in the database (See Issues List).
+
+*	**Homepage Main Section**    
+    * Basic Card Links on the home page of `WORDS`, `NEW WORD` and `CATEGORIES` have been extensively tested to take the user to the relevant page.
+    * The Wave image, homepage paragraph and basic card are set-up to maintain a third each of this section on larger screen types and each take up 
+      the entire width of the screen on smaller devices.
+
+*	**Browse Words Main Section**     
+
+*	**New Word Main Section**
+
+*	**Manage Categories Main Section**
 
 *	**Responsive / Mobile First design** 
-    * The dashboard page has a **Header**; **Main Section** and **Footer**. These needed to display correctly accross 
+    * Each page of the web-app has a **Header**; **Main Section** and **Footer**. These needed to display correctly accross 
       all devices and screen resolutions. primarily checks are required to ensure that the dashboard collapses in to columns in mobile view 
       and that the information is presented in a clear and legible fashion.
-    * The header image and title was removed in mobile view in order to have the Nav Bar at the top of the page. This was done to provide a 
-      better user experience and clarity of design, as the image did not show well in a smaller view. 
-    * The table was removed in mobile view as it did not present well in this view and the data was too small if the table is shrunk. 
-      All of the data available in the table is also available in the graphs and charts.
-    * The second paragraph was removed in tablet view, as this utilised too much space and did not present well in tablet view.
+    * The header title was is straightened in mobile view in order to resize the Navbar sensibly. This was done to provide a 
+      better user experience and clarity of design, as the title animation did not show well in a smaller view. 
+    * The Side-Nav burger icon presents itself at the top-left of the NavBar in medium and small view. This has been tested across multiple 
+      devices listed in this below.
+    * Various methods of testing have been carried out to test the code of the web-app. Continuous testing throughout the development has been 
+      implemented to check the quality of the code. The aim is to check the functionality of the code on different devices (mobile, tablet, desktop) 
+      with an overall perspective of responsive and mobile first design. The site has been viewed and tested in **Firefox**, **Safari**, **Chrome** 
+      **Microsoft Edge** and **Explorer**. The 
+      devices used to test the site are **iPhone 5/SE**, **Samsung Galaxy**, **iPad**, **iPad Pro** **iPhone X**, **iPhone 6/7/8**, **Pixel 2**, 
+      **Pixel 2 XL** , **Hudle2** and **Samsung / Lenovo / HP laptop**. 
 
 *	**Data** 
     * The data used for the dashboard was exported from https://data.opendatasoft.com/explore/dataset/global-shark-attack%40public-us/export/, 
