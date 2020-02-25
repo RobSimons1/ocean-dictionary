@@ -204,11 +204,49 @@ The main basic functions of the web-app that required rigorous testing in differ
     * The Wave image, homepage paragraph and basic card are set-up to maintain a third each of this section on larger screen types and each take up 
       the entire width of the screen on smaller devices.
 
-*	**Browse Words Main Section**     
+*	**Browse Words Main Section**  
+    * The words on this page are listed in alphabetical order regardless of the case of the initial letter. This functionality required extensive testing in order 
+      make the functions work correctly.
+    * The `Definition` button and drop down menu required were rigourously tested to ensure that they function correctly and display the correct definition for the 
+      associated word direct from the data base.
+    * The `Edit` button for each word redirects the user to the Edit Word page.  
+    * The `Delete` button brings up the `Are you sure you want to delete this word??` box where the user can choose `Ok` or `Cancel`. The `Ok` button deletes the 
+      word and associated definition from the database completely, which functonality has been thoroughly tested. `Cancel` returns the user to the Browse Words page.
 
 *	**New Word Main Section**
+    * The user is taken to the Add Word page, where there is a three row form. The `Choose Category` row is a drop down menu selector that shows all categories 
+      currently entered in to the database. This drop down has been tested to ensure that it shows the categories in alphabetical order regardless of capitalisation
+      of the initial letter.The `Input Word` and `Input Definition` rows have been thoroughly tested so that the functionality works and iputs a new word_id and 
+      associated definition in to the database. This required a large amount of testing and with different functions and methods (See Issues List).
+    * The `Add Word` button submits the form to the database and has been extensively tested.
+    * The `Cancel` button returns the user to the Browse Words page. This has been thoroughly tested.
+
+*	**Edit Word Main Section**
+    * The `Edit Word` button directs the user to this page where the user is presented with a three row form. The form is already populated with the existing 
+      `Word Category`, `Word Name` and `Word Definition` from the database. The `Word Category` row is a drop down menu selector that shows all categories 
+      currently entered in to the database. This drop down has been tested to ensure that it shows the categories in alphabetical order regardless of capitalisation
+      of the initial letter.The `Input Word` and `Input Definition` rows have been thoroughly tested so that the functionality works and iputs a new word_id and 
+      associated definition in to the database. This required a large amount of testing and with different functions and methods (See Issues List).
+    * The `Edit Word` button submits the form to the database and overwrites the existing data. This has been extensively tested.
 
 *	**Manage Categories Main Section**
+    * The user is taken to the Categories page. The categories on this page are listed in alphabetical order regardless of the case of the initial letter. This 
+      functionality required extensive testing in order make the functions work correctly.
+    * The `Edit` button for each category redirects the user to the Edit Category page.  
+    * The `Delete` button brings up the `Are you sure you want to delete this category??` box where the user can choose `Ok` or `Cancel`. The `Ok` button deletes the 
+      category from the database completely, which functonality has been thoroughly tested. `Cancel` returns the user to the Categories page.  
+
+*	**Edit Category Main Section**
+    * The `Edit Category` button presents the user with a single row pre-populated form where the user is able to edit the `Category Name`. This will amend the 
+      category_id dierctly in the database when the `Save Changes` button is pressed. This function has been extensively tested.
+    * The `Cancel` button returns the user to the Browse Categories page. This has been thoroughly tested.    
+
+*	**Add Category Main Section**
+    * by pressing the `Add Category` button in the Manage Categories page the user is taken to the Add Category page, where there is a one row form. The `Category Name` 
+      row allows the user to input a new category. This has been thoroughly tested so that the functionality works and iputs a new category_id in to the database. This 
+      required a large amount of testing and with different functions and methods (See Issues List).
+    * The `Add Category` button submits the form to the database and has been extensively tested.
+    * The `Cancel` button returns the user to the Browse Words page. This has been thoroughly tested.
 
 *	**Responsive / Mobile First design** 
     * Each page of the web-app has a **Header**; **Main Section** and **Footer**. These needed to display correctly accross 
@@ -226,10 +264,11 @@ The main basic functions of the web-app that required rigorous testing in differ
       **Pixel 2 XL** , **Hudle2** and **Samsung / Lenovo / HP laptop**. 
 
 *	**Data** 
-    * The data used for the dashboard was exported from https://data.opendatasoft.com/explore/dataset/global-shark-attack%40public-us/export/, 
-      which also had the option of connecting directly to the API https://data.opendatasoft.com/explore/dataset/global-shark-attack%40public-us/api/, 
-      but this proved unmanageable due to the variations of spellings, capitalisation, size and non-uniformity of the data set. I decided to instead 
-      export the .csv file that was more manageable for the simplified data that I wanted to present. 
+    * 
+
+*	**.gitignore** 
+    * 
+
 
 ## Issue List
 
