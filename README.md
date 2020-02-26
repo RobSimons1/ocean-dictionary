@@ -134,16 +134,21 @@ the operation, they are taken back to the Categories page.
 ## Technologies Used
 The languages, frameworks, libraries and other tools utilised for building this web-app are:
 
-* **Mongo DB -** 
+* **Gitpod -** Gitpod is a cloud-based integrated development environment (IDE) that has been used to write, run, and debug the code used for 
+the web-app. https://www.gitpod.io/
 
-* **Flask -**
-
-* **Python 3.1 -** 
-
-* **Jinja -** 
+* **GitHub -** GitHub has been used for version control of the code by using Git functions in the control panel. Github was utilised frequently 
+during the development of the web-app.  https://github.com/
 
 * **Heroku -** This is a cloud based application platform that allows deployment of an application to the web and connection to the database. 
 https://heroku.com/
+
+* **Mongo DB Atlas -** This is a general purpose, document based, distributed database with scalability and flexability. https://www.mongodb.com/
+
+* **PyMongo -** This is a Python distribution containing tools for working with MongoDB, and is the recommended way to work with MongoDB from 
+Python, as an API for MongoDB intergration. https://api.mongodb.com/
+
+### Front-End Technologies
 
 * **HTML 5 -** The web-app uses HTML5 as a fundamental basis for building the web-app. Where possible semantic HTML is used to give the user a 
 better understanding.
@@ -158,20 +163,28 @@ utilised to accommodate the responsive and mobile first design of the web-app. h
 * **jQuery -** The web-app uses jQuery, as it simplifies a lot of complicated tasks from JavaScript, such as AJAX calls and DOM manipulation. 
 https://www.jquery.com/jquery-3.4.1
 
-* **Gitpod -** Gitpod is a cloud-based integrated development environment (IDE) that has been used to write, run, and debug the code used for 
-the web-app. https://www.gitpod.io/
-
-* **GitHub -** GitHub has been used for version control of the code by using Git functions in the control panel. Github was utilised frequently 
-during the development of the web-app.  https://github.com/
-
 * **Google Fonts-** The dashboard uses Google fonts to accentuate certain text. https://fonts.google.com/
 
-## Testing
+### Back-End Technologies
 
-The final database schema and desktop wireframes for the web-app can be seen in the *supporting_docs folder* under *oceanic_dictionary_database_schema.png*, 
-*wireframe1_oceanic_dictionary_home.png*, *wireframe2_ oceanic_dictionary_browse_words.png*, *wireframe3_ oceanic_dictionary_manage_categories.png* 
-and unused *wireframe4_ oceanic_dictionary_manage_categories.png*. These wireframes and database schema were used initially to plan the web-app and build 
-around The opinions of numerous people including my mentor, friends, tutors, chat forums and such like, whom were asked during various stages of the project.
+* **Python 3.1 -** Python emphasises readability, uses English keywords and is highly extensible. The core language itself is quite small, 
+and it is easy to learn for brginners. https://www.python.org/  
+
+* **Flask -** This is a lightweight Web Server Gateway Interface (WSGI) web application framework. There is little boilerplate code for 
+getting a simple app up and running.
+
+* **Jinja -** This is a modern and designer-friendly templating language for Python. It is fast, widely used and secure with the optional 
+sandboxed template execution environment. 
+
+* **dnspython -**
+
+* **Flask-PyMongo -**
+
+* **itsdangerous -**
+
+* **Werkzeug -**
+
+## Testing
 
 The main basic functions of the web-app that required rigorous testing in different scenarios are listed below.
 
@@ -263,12 +276,31 @@ The main basic functions of the web-app that required rigorous testing in differ
       devices used to test the site are **iPhone 5/SE**, **Samsung Galaxy**, **iPad**, **iPad Pro** **iPhone X**, **iPhone 6/7/8**, **Pixel 2**, 
       **Pixel 2 XL** , **Hudle2** and **Samsung / Lenovo / HP laptop**. 
 
+*	**Blank Form Input** 
+    *       
+
 *	**Data** 
     * 
 
 *	**.gitignore** 
     * 
 
+*	**W3 Nu Html Checker** 
+    *  
+
+*	**W3C CSS Validator** 
+    *      
+
+*	**JShint** 
+    * 
+
+*	**PEP8 Online** 
+    *              
+       
+The final database schema and desktop wireframes for the web-app can be seen in the *supporting_docs folder* under *oceanic_dictionary_database_schema.png*, 
+*wireframe1_oceanic_dictionary_home.png*, *wireframe2_ oceanic_dictionary_browse_words.png*, *wireframe3_ oceanic_dictionary_manage_categories.png* 
+and unused *wireframe4_ oceanic_dictionary_manage_categories.png*. These wireframes and database schema were used initially to plan the web-app and build 
+around The opinions of numerous people including my mentor, friends, tutors, chat forums and such like, whom were asked during various stages of the project.
 
 ## Issue List
 
@@ -302,8 +334,9 @@ The main basic functions of the web-app that required rigorous testing in differ
   
 ## Deployment
 
-The dashboard is designed in the AWS Cloud9 environment and regularly committed and to GitHub after each crucial piece of coding. Using this method as a sanity check 
-for the development enabled me to restore the site back to previous stages when it functioned correctly or easily find lost pieces of code. 
+The web-app is designed in the Gitpod environment and regularly committed to GitHub after each crucial piece of coding. 
+Using this method as a sanity check for the development enabled me to restore the site back to previous stages when it 
+functioned correctly or easily find lost pieces of code. 
 
 To deploy the project to Github the following steps were taken:
 
@@ -317,6 +350,11 @@ To deploy the project to Github the following steps were taken:
   8. Open Git Bash Terminal
   9. Type `git clone`, and then paste the URL
   10. Press `Enter`. A local clone will be created.
+
+To deploy the project to Heroku the following steps were taken:
+  1. created a `master` branch in Github repository
+  2. 
+  
 
 ## Credits 
 
