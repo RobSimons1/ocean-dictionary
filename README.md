@@ -127,7 +127,9 @@ the operation, they are taken back to the Categories page.
 
 * Words to be spilt up into there own individual letter and not one continous list of all words in alphabeitical order.
 
-* Voting on words Page? Difficult without user login credentials.
+* User LOGIN and REGISTER options.
+
+* Voting on words Page? Thumbs up and down. Difficult without user login credentials.
 
 * Could not create Text Index?
 
@@ -341,9 +343,9 @@ functioned correctly or easily find lost pieces of code.
 To deploy the project to Github the following steps were taken:
 
   1. created a `master` branch in Github repository 
-  2. Used Local AWS Cloud9 environment used to build the site
+  2. Used Local AWS Cloud9 and Gitpod environment used to build the site
   3. Committed files to the staging area using bash terminal commands: `git status`; `git add (specify directory)`; `git commit -m"add message"`
-  4. Pushed files to the working environment using `git push`, which then updates the repository and is also viewable as a link https://github.com/RobSimons1/global-white-shark-attack-dashboard for testing on other devices and screen resolutions
+  4. Pushed files to the working environment using `git push`, which then updates the repository.
   5. Published site from `master` branch using `settings` tab in the main page of the repository, select `source` as `master branch`, then `save`
   6. The repository can be cloned by clicking `Clone or Download` on the main page of the repository 
   7. In the Clone with HTTPs section, click the clipboard icon to copy the clone URL for the repository
@@ -351,10 +353,37 @@ To deploy the project to Github the following steps were taken:
   9. Type `git clone`, and then paste the URL
   10. Press `Enter`. A local clone will be created.
 
+To set gitignore environment variables the following steps were taken: 
+
+  1. Create a file named env.py in the root directory of your project. This is the file you will use to define your environment variables.
+  2. If you don't have one already, create a file named .gitignore  in the root directory of your project.
+  3. Next we need to stop git from pushing this file to github, and so keep your environment variables secret. To do this, open your .gitignore  file add the following text: env.py
+  4. At the top of your env.py  file, you need to import os so that you can set the environment variables in the operating system. Once you have added the line “import os” 
+     underneath you can assign your environment variables using the following syntax:  
+     `os.environ["Variable Name Here"] = "Value of Variable Goes Here"`
+  5. Then the following code imports this new env.py file where you need to use your environment variables. For example your app.py file for flask project. Add this under your 
+     other imports at the top of the file  
+     `from os import path`
+      `if path.exists("env.py"):`
+      `import env` 
+  6. Now that your environment variables have been set in your env.py file, and the file has been imported into your project, you can use them as needed using the following syntax:  
+     `MONGODB_NAME = os.environ.get('MONGODB_NAME')`
+
 To deploy the project to Heroku the following steps were taken:
-  1. created a `master` branch in Github repository
-  2. 
-  
+  1. created a Heroku account @ https://signup.heroku.com/
+  2. Create `requirements.txt` file in Gitpod workspace for Heroku to understand installation files to run app. From CLI type type 
+     `pip3 freeze --local > requirements.txt`.
+  3. To install the Heroku command line on Gitpod or AWS Cloud9, use the following command `npm install -g heroku`
+  4. Create app with apropriate title and server in Heroku. This creates a connection between the Gitpod application and Heroku that would allow us 
+     to push our changes using Git to update the application at any given time. 
+  5. To login to Heroku from the CLI, use the command `heroku login`
+  6. Code that is prepared to be pushed from Github to Heroku can be executed following the CLI commands:
+     `git add .`
+     `git commit -m "fist Heroku commit"`
+     `git push`
+  7. Now that the relevant code is pushed to Github, it can also be pushed to Heroku from the chosen branch (e.g. Master)
+  8. To connect an existing repository from Github to Heroku use the following CLI syntax: `heroku git:remote -a {followed by name of Heroku app}
+  9. To push to Heroku Master Branch, then simply use `git push heroku master`
 
 ## Credits 
 
