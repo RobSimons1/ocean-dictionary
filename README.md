@@ -319,7 +319,7 @@ around The opinions of numerous people including my mentor, friends, tutors, cha
   |   2    |Results of search bar search not displaying all first letter cases (e.g. 'A'and 'a') |`case_sensitive=false` added to Python function|
   |   3    |Results of individual letter searches needed to ignore capitalisation of first letter |`letter='^A'` added to Python functions for each letter|
   |   4    |`More Links` tab in Footer is intended for external links such as FaceBook, Twitter etc. |Due to time constraints these links have not been set up|
-  |   5    |Flashed message that appears when a user inputs a new Word or Category only appears for words and categories capitalised in the exact same way as already in the database |In order to correct this all words and categories would have to enter the database in the same case letters. Due to time constraints it was not possible to write this functionality|
+  |   5    |Flashed message that appears when a user inputs a duplicate new Word or Category only appears for words and categories capitalised in the exact same way as already in the database |In order to correct this all words and categories would have to enter the database in the same case letters. Due to time constraints it was not possible to write this functionality|
   |   6    |Issues with some Materialize elements not able to target in CSS (e.g. Colour of individual letter Aa, Bb etc) |Had to leave in-line HTML (e.g. `a class="blue-grey-text"`|
   |   7    |Try to separate each different Letter in the `Browse Words` page, so that all words associated with that letter are listed under a title (e.g. Aa) |Jinja does not appear to have enough logic to complete this task, including seeing the difference between 'A' and 'a' for example.|
   |   8    |`Upvoting functionality`, where the  user is able to vote on a specific word, as intended in Wireframe4 and button in Wireframes Header |It appears that this is a function that requires Login/Authentification that I have not had time to implement these |
@@ -404,17 +404,17 @@ This README.md file is based on the Code Institute template.
 
 ### Media 
 
-CBS Interactive Inc.(2019): https://www.cbsnews.com/pictures/five-most-dangerous-sharks-to-humans/
+Words, Definitions and Categories in Dictionary are taken from many different sources and are mainly used as preliminary 
+filling for the project. Credit to similar websites: https://digimap.edina.ac.uk/webhelp/marine/getting_started/marine_glossary.htm 
+& https://life.bio.sunysb.edu/marinebio/glossary.ghijk.html 
 
-Data obtained from: https://data.opendatasoft.com/explore/dataset/global-shark-attack%40public-us/export/
-
-Dataset info for global-shark-attack@public-us; http://www.sharkattackfile.net/incidentlog.htm
+Homepage Paragraph: http://www.seasky.org/
 
 Favicon image downloaded from: https://www.shutterstock.com/image-vector/dangerous-sea-life-207907852?studio=1
 
 Favicon – created using http://www.favicomatic.com/done
 
-Shark and Surfer Image: https://usatunofficial.files.wordpress.com/2011/10/shark-in-a-wave-with-surfer.jpg
+Wave Image: http://www.ox.ac.uk/news/2015-12-16-freak-ocean-waves-hit-without-warning-new-research-shows
 
 ### Acknowledgments
 
