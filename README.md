@@ -370,20 +370,26 @@ To set gitignore environment variables the following steps were taken:
      `MONGODB_NAME = os.environ.get('MONGODB_NAME')`
 
 To deploy the project to Heroku the following steps were taken:
+
   1. created a Heroku account @ https://signup.heroku.com/
   2. Create `requirements.txt` file in Gitpod workspace for Heroku to understand installation files to run app. From CLI type type 
      `pip3 freeze --local > requirements.txt`.
   3. To install the Heroku command line on Gitpod or AWS Cloud9, use the following command `npm install -g heroku`
-  4. Create app with apropriate title and server in Heroku. This creates a connection between the Gitpod application and Heroku that would allow us 
+  4. Using the `New` buton, Create a new app with apropriate title and server in Heroku. This creates a connection between the Gitpod application and Heroku that would allow us 
      to push our changes using Git to update the application at any given time. 
   5. To login to Heroku from the CLI, use the command `heroku login`
-  6. Code that is prepared to be pushed from Github to Heroku can be executed following the CLI commands:
+  6. To get the application up and running a `Procfile` is required that istructs Heroku which file is the entry point. Use the following command to create this: 
+     `echo web: python app.py`
+  7. Code that is prepared to be pushed from Github to Heroku can be executed following the CLI commands:
      `git add .`
      `git commit -m "fist Heroku commit"`
      `git push`
-  7. Now that the relevant code is pushed to Github, it can also be pushed to Heroku from the chosen branch (e.g. Master)
-  8. To connect an existing repository from Github to Heroku use the following CLI syntax: `heroku git:remote -a {followed by name of Heroku app}
-  9. To push to Heroku Master Branch, then simply use `git push heroku master`
+  8. Now that the relevant code is pushed to Github, it can also be pushed to Heroku from the chosen branch (e.g. Master)
+  9. To connect an existing repository from Github to Heroku use the following CLI syntax: `heroku git:remote -a [followed by name of Heroku app]`
+  10. To push to Heroku Master Branch, then simply use `git push heroku master`
+  11. To scale dynos and run the app in Heroku, use the CLI command: `heroku ps:scale web=1`
+  12. In order for the server instance on Heroku to know how to run our Flask application, we need to specify IP and Port in Heroku. To do this go to `Settings` 
+      tab > `Config Variables` and input: `IP Address: 0.0.0.0`; `Port: 5000`  
 
 ## Credits 
 
