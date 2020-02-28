@@ -178,13 +178,14 @@ getting a simple app up and running.
 * **Jinja -** This is a modern and designer-friendly templating language for Python. It is fast, widely used and secure with the optional 
 sandboxed template execution environment. 
 
-* **dnspython -**
+* **dnspython -** This is a toolkit for Python that supports almost all record types and allows the new style connection string for MongoDB 
+Atlas to be utilised.
 
-* **Flask-PyMongo -**
+* **Flask-PyMongo -** This allows Flask to communicate with Mongo. It is optimized to work with Flask.
 
-* **itsdangerous -**
+* **itsdangerous -** This is used to cryptographically sign and customize how the data is serialised.
 
-* **Werkzeug -**
+* **Werkzeug -** This is a comprehensive Web Server Gateway Interface (WSGI) web application library.
 
 ## Testing
 
@@ -340,7 +341,7 @@ The web-app is designed in the Gitpod environment and regularly committed to Git
 Using this method as a sanity check for the development enabled me to restore the site back to previous stages when it 
 functioned correctly or easily find lost pieces of code. 
 
-To deploy the project to Github the following steps were taken:
+### To deploy the project to Github the following steps were taken:
 
   1. created a `master` branch in Github repository 
   2. Used Local AWS Cloud9 and Gitpod environment used to build the site
@@ -353,7 +354,7 @@ To deploy the project to Github the following steps were taken:
   9. Type `git clone`, and then paste the URL
   10. Press `Enter`. A local clone will be created.
 
-To set gitignore environment variables the following steps were taken: 
+### To set gitignore environment variables the following steps were taken: 
 
   1. Create a file named env.py in the root directory of your project. This is the file you will use to define your environment variables.
   2. If you don't have one already, create a file named .gitignore  in the root directory of your project.
@@ -369,7 +370,7 @@ To set gitignore environment variables the following steps were taken:
   6. Now that your environment variables have been set in your env.py file, and the file has been imported into your project, you can use them as needed using the following syntax:  
      `MONGODB_NAME = os.environ.get('MONGODB_NAME')`
 
-To deploy the project to Heroku the following steps were taken:
+### To deploy the project to Heroku the following steps were taken:
 
   1. created a Heroku account @ https://signup.heroku.com/
   2. Create `requirements.txt` file in Gitpod workspace for Heroku to understand installation files to run app. From CLI type type 
