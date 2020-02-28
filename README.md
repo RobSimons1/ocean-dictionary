@@ -129,9 +129,13 @@ the operation, they are taken back to the Categories page.
 
 * User LOGIN and REGISTER options.
 
-* Voting on words Page? Thumbs up and down. Difficult without user login credentials.
+* Voting on words Page? Thumbs up and down. Difficult to implement without user login credentials.
 
 * Could not create Text Index?
+
+* Comments and Messaging service originally planned in Wireframes. Difficult to implement without user login credentials.
+
+* Online Store originally planned in Wireframes. Difficult to implement without user login credentials.
 
 ## Technologies Used
 The languages, frameworks, libraries and other tools utilised for building this web-app are:
@@ -318,19 +322,19 @@ around The opinions of numerous people including my mentor, friends, tutors, cha
   |   5    |Flashed message that appears when a user inputs a new Word or Category only appears for words and categories capitalised in the exact same way as already in the database |In order to correct this all words and categories would have to enter the database in the same case letters. Due to time constraints it was not possible to write this functionality|
   |   6    |Issues with some Materialize elements not able to target in CSS (e.g. Colour of individual letter Aa, Bb etc) |Had to leave in-line HTML (e.g. `a class="blue-grey-text"`|
   |   7    |Try to separate each different Letter in the `Browse Words` page, so that all words associated with that letter are listed under a title (e.g. Aa) |Jinja does not appear to have enough logic to complete this task, including seeing the difference between 'A' and 'a' for example.|
-  |   8    |`Upvoting functionality`, where the  user is able to vote on a specific word, as intended in Wireframe4 |It appears that this is a function that requires Login/Authentification that I have not had time to add to the web-app |
-  |   9    | ||
+  |   8    |`Upvoting functionality`, where the  user is able to vote on a specific word, as intended in Wireframe4 and button in Wireframes Header |It appears that this is a function that requires Login/Authentification that I have not had time to implement these |
+  |   9    |Login / Authentification` buttons as shown in wireframes |Due to time constraints, I was not abe to implement these|
   |   10   |Explorer displaying the |Decided to leave this, as browser being phased out and rarely used |
-  |   11   | ||
-  |   12   | ||
-  |   13   | ||
+  |   11   |Switched IDE midway through project fron AWS Cloud9 to Gitpod |This was time slightly time consuming, as had to learn working of the new IDE |
+  |   12   |Initially `Browse Words` page displayed words in case sensitive order, so that words beginning upper case would superseed words beginning lower case, no matter what the second letter of the word was |`case_sensitive=false` added to Python function|
+  |   13   |Initially a link to an online store was planned in the Header of the Wireframes |Due to time constraints and possible Login / Authentification issues, this was not possible |
   |   14   |Needed to validate CSS for debugging purposes | Utilised jigsaw.W3 CSS Validator (zero errors) |
   |   15   |Needed to validate JavaScript for debugging purposes | Utilised jshint.com (no errors) |
   |   16   |Needed to validate HTML for debugging purposes | Utilised W3 Markup Validation Service (1 warning) |
-  |   17   | ||
-  |   18   | ||
+  |   17   |`Comments and Messaging service` originlly planned in Wireframes Footer |Due to time constraints and possible Login / Authentification issues, this was not possible|
+  |   18   | Initially the `Wave picture` and `Basic Card` were going to appear on each page of the web-app, as in the Wireframes|Decided against this because it was unnecessary|
   |   19   | ||
-  |   20   | ||
+  |   20   |Are Python Flask and Jinja functions self explanatory |Added further comments to app.py file|
   |   21   |Is HTML semantic and self explanatory  | Added further comments to index.html file |
   |   22   |Is main.js self explanatory  | Added further comments to main.js file |
 
