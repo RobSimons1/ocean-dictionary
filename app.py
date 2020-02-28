@@ -7,7 +7,6 @@ from os import path
 if path.exists("env.py"):
     import env
 
-#load_dotenv()
 
 app = Flask(__name__)
 app.config["MONGODB_NAME"] = 'ocean_dictionary'
@@ -92,7 +91,7 @@ def update_category(category_id):
 def insert_category():
     category_doc = mongo.db.categories
     new_category = request.form.get("category_name")
-    #mongo.db.categories.insert_one(category_doc)
+    
     if category_doc.count_documents({'category_name': new_category}, limit=1) == 0:
         category_doc.insert_one(request.form.to_dict())
     else:
@@ -120,30 +119,9 @@ def get_search():
     """ 
     query = request.args.get('q') # Grab the arugments via GET request
     print(query)
-    # que = {'$regex': re.compile('.*{}.*'.format(query)), '$options': 'i'}
+    
     results = mongo.db.words.find({"word_name": {"$regex": query, "$options": 'i'}})
-    # mongo.db.create_index( { name: "text", description: "text" } )
-    # mongo.db.words.create_index({ "word_name": "text" })
-    # total = mongo.db.words.create_index({'$text': {'$search': db_query }})
-    #words = mongo.db.words.find({"word_name": { "$regex": query }}).sort("word_name",-1)
-    # sort("word_name",-1) sorts into ascending alphabetical order in search.html
-    #words = list(words)
-    # list.sort(word_name)
-    # words = mongo.db.words.sort("word_name")
-    # mongo.db.words.createIndex({ category_name: "text", word_name: "text", word_definition: "text" })
-    # for i in words:
-    #     print(i)
-    # mongo.db.words.create_index({ "$**" : "text" })
-    # results = mongo.db.words.find({'$text':{'$search': query}}) # Search the db 
-    #results = list(results)
-    # list.sort(text)
-    # results = mongo.db.words.sort("word_name")
-    # for i in results:
-    #     print(i)
-    # print("hhhhh")
     return render_template('search.html',  query=results) # Pass the results to the view
-
-    # categories=mongo.db.categories.sort()
 
 @app.route('/get_letters/<letter>') 
 def get_letters(letter): 

@@ -197,7 +197,7 @@ The main basic functions of the web-app that required rigorous testing in differ
       returned to. This is valid for both the words 'Oceanographic' and 'Dictionary', as thay are split across two separate rows. 
     * Green `Add Word` button is configured to redirect the user to the Add Word page. Verified the link and left side positioning in all browsers and 
       screen sizes. 
-    * The Search Bar required rigourous testing due to the varoius ways the words in Mongo DB could be accessed and displayed (See Issues List).
+    * The Search Bar required rigourous testing due to the varoius ways the words in Mongo DB could be accessed and displayed (See Issues List #1).
     * Green magnifying glass icon `Search` button next to the search bar activates the entry into the Search Bar. This has been tested and affixed in place 
       to maintain its funcionality in all browsers and screen sizes.
     * The Navbar `Home`, `Browse Words`, `New Word` and `Manage Categories` buttons have been extensively tested to rediriect the user to the relevant page.
@@ -206,14 +206,14 @@ The main basic functions of the web-app that required rigorous testing in differ
 
 *	**Footer** 
     * The Footer links of `Home`, `Browse Words`, `New Word` and `Manage Categories` have all been extensively tested to redirect the user to the relevant page.
-    * the `More Links` button is where links to external pages will be placed (e.g. Facebook, Twitter etc.) (See Issues List).
+    * the `More Links` button is where links to external pages will be placed (e.g. Facebook, Twitter etc.) (See Issues List #4).
 
 *	**Main base.html section**    
     * The Individual alphabetical letters are situated below the NavBar, but still appear on every page of the web-app. Each letter has been tested numerous 
       times to ensure that the functionality is correct and brings up all words begininng with the relevant letter, regardless of whether the word stored in the 
       database begins with an upper or lower case character.
     * A flashed message appears `This item aleady exists in the database` when a user inputs a word or category that is already in the database. This has been 
-      tested and works provided that spelling and capitalisation of letters matches exactly what is all ready in the database (See Issues List).
+      tested and works provided that spelling and capitalisation of letters matches exactly what is all ready in the database (See Issues List #5).
 
 *	**Homepage Main Section**    
     * Basic Card Links on the home page of `WORDS`, `NEW WORD` and `CATEGORIES` have been extensively tested to take the user to the relevant page.
@@ -233,7 +233,7 @@ The main basic functions of the web-app that required rigorous testing in differ
     * The user is taken to the Add Word page, where there is a three row form. The `Choose Category` row is a drop down menu selector that shows all categories 
       currently entered in to the database. This drop down has been tested to ensure that it shows the categories in alphabetical order regardless of capitalisation
       of the initial letter.The `Input Word` and `Input Definition` rows have been thoroughly tested so that the functionality works and iputs a new word_id and 
-      associated definition in to the database. This required a large amount of testing and with different functions and methods (See Issues List).
+      associated definition in to the database. This required a large amount of testing and with different functions and methods.
     * The `Add Word` button submits the form to the database and has been extensively tested.
     * The `Cancel` button returns the user to the Browse Words page. This has been thoroughly tested.
 
@@ -242,7 +242,7 @@ The main basic functions of the web-app that required rigorous testing in differ
       `Word Category`, `Word Name` and `Word Definition` from the database. The `Word Category` row is a drop down menu selector that shows all categories 
       currently entered in to the database. This drop down has been tested to ensure that it shows the categories in alphabetical order regardless of capitalisation
       of the initial letter.The `Input Word` and `Input Definition` rows have been thoroughly tested so that the functionality works and iputs a new word_id and 
-      associated definition in to the database. This required a large amount of testing and with different functions and methods (See Issues List).
+      associated definition in to the database. This required a large amount of testing and with different functions and methods.
     * The `Edit Word` button submits the form to the database and overwrites the existing data. This has been extensively tested.
 
 *	**Manage Categories Main Section**
@@ -260,7 +260,7 @@ The main basic functions of the web-app that required rigorous testing in differ
 *	**Add Category Main Section**
     * by pressing the `Add Category` button in the Manage Categories page the user is taken to the Add Category page, where there is a one row form. The `Category Name` 
       row allows the user to input a new category. This has been thoroughly tested so that the functionality works and iputs a new category_id in to the database. This 
-      required a large amount of testing and with different functions and methods (See Issues List).
+      required a large amount of testing and with different functions and methods.
     * The `Add Category` button submits the form to the database and has been extensively tested.
     * The `Cancel` button returns the user to the Browse Words page. This has been thoroughly tested.
 
@@ -311,26 +311,26 @@ around The opinions of numerous people including my mentor, friends, tutors, cha
 
   | Issue  |                 Description                     |       Solution                      |  
   | ------ |:-----------------------------------------------:|:-----------------------------------:|
-  |   1    |Attempted to connect dashboard directly to API but data proving unmanageable|Downloaded .csv file instead|
-  |   2    |Unable to download export whole dataset due to issue with website |downloaded each year separately|
-  |   3    |Issues with uniformity of the .csv data (e.g. spellings and capitalisation) |Amended these issues directly in .csv file|
-  |   4    |Composite chart , Stacked bar chart and Bar graph not scaling correctly on smaller devices |Used viewbox resize to scale correctly |
-  |   5    |Dates on Composite Chart X-axis displaying incorrectly (e.g. 1,985)|Function added to bottom of `show_country_year`  to correct this |
-  |   6    |Attempted to use Age Range function that would separate the ages Pie Chart into ranges |This did not connect to other charts. Added Age range column to .csv file |
-  |   7    |Queue, Crossfilter and and DC.js showing as ‘Undefined’ in main.js tab | `/*global varname*/` added to remove undefined variable errors |
-  |   8    |Header image and title took up too much space in responsive views | Changed display to none in media query below tablet resolution |
-  |   9    |”Next” and “Last” buttons did not work on Table |Event listener added to these buttons to globally rectify this |
-  |   10   |Explorer displaying the charts which use viewbox resizing too small |Decided to leave this, as browser being phased out and rarely used |
-  |   11   |Second intro paragraph did not fit on tablet size and was left in row alone | Removed from tablet view using media query |
-  |   12   |Stacked bar chart did not read well when using percentages to diplay types of attacks that were fatal |Opted to use actual count as this was clearer|
-  |   13   |Table not scaling correctly on smaller devices |Used media query to remove table from smaller devices |
+  |   1    |Attempted to set up Text Index in app.py to allow search bar to function correctly following MongoDB Manual, but was unable to get this to work as db can only have ONE index, and by doing it in the python file, it will create an index per each search, and errors.|Instead used `$regex": query` method, which works for my data|
+  |   2    |Results of search bar search not displaying all first letter cases (e.g. 'A'and 'a') |`case_sensitive=false` added to Python function|
+  |   3    |Results of individual letter searches needed to ignore capitalisation of first letter |`letter='^A'` added to Python functions for each letter|
+  |   4    |`More Links` tab in Footer is intended for external links such as FaceBook, Twitter etc. |Due to time constraints these links have not been set up|
+  |   5    |Flashed message that appears when a user inputs a new Word or Category only appears for words and categories capitalised in the exact same way as already in the database |In order to correct this all words and categories would have to enter the database in the same case letters. Due to time constraints it was not possible to write this functionality|
+  |   6    |Issues with some Materialize elements not able to target in CSS (e.g. Colour of individual letter Aa, Bb etc) |Had to leave in-line HTML (e.g. `a class="blue-grey-text"`|
+  |   7    | ||
+  |   8    | ||
+  |   9    | ||
+  |   10   |Explorer displaying the |Decided to leave this, as browser being phased out and rarely used |
+  |   11   | ||
+  |   12   | ||
+  |   13   | ||
   |   14   |Needed to validate CSS for debugging purposes | Utilised jigsaw.W3 CSS Validator (zero errors) |
   |   15   |Needed to validate JavaScript for debugging purposes | Utilised jshint.com (no errors) |
   |   16   |Needed to validate HTML for debugging purposes | Utilised W3 Markup Validation Service (1 warning) |
-  |   17   |HTML Validation warning "Section lacks heading" | This warning can be ignored as does not affect code |
-  |   18   |X-axis titles on Activities bar graph not displaying correctly in horizontal view |Used `text-anchor: end !important` in CSS to angle text |
-  |   19   |Data in .csv file was causing more columns in graphs for the same variable (e.g. Body Boarding and Boogie Boarding) | Amended to .cvs variable names to make more uniform |
-  |   20   |Header `Refresh Charts` button was not positioning correctly in Windows Edge | Used `float: inherit` in CSS to fix |
+  |   17   | ||
+  |   18   | ||
+  |   19   | ||
+  |   20   | ||
   |   21   |Is HTML semantic and self explanatory  | Added further comments to index.html file |
   |   22   |Is main.js self explanatory  | Added further comments to main.js file |
 
