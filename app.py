@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, redirect, request, url_for, flash
 from flask_pymongo import PyMongo
-from bson.objectid import ObjectId 
+from bson.objectid import ObjectId
 import re
 from os import path
 if path.exists("env.py"):
@@ -11,27 +11,31 @@ if path.exists("env.py"):
 app = Flask(__name__)
 app.config["MONGODB_NAME"] = 'ocean_dictionary'
 MONGODB_NAME = os.environ.get('MONGODB_NAME')
-app.config["MONGO_URI"] =os.getenv('MONGO_URI') 
+app.config["MONGO_URI"] = os.getenv('MONGO_URI')
 app.secret_key = 'my_secret_key'
 
+
 mongo = PyMongo(app)
+
 
 @app.route('/')
 @app.route('/show_words')
 def show_words():
     return render_template("index.html", words=mongo.db.words.find())
 
+
 @app.route('/get_words')
 def get_words():
-    return render_template("words.html", words=mongo.db.words.find().sort("word_name")) 
-    #.sort to alphabetise 
- 
+    return render_template("words.html",
+    words=mongo.db.words.find().sort("word_name"))
+
+
 @app.route('/add_word')
 def add_word():
     return render_template('addword.html',
-    categories=mongo.db.categories.find())  
+    categories=mongo.db.categories.find())
 
-  
+
 @app.route('/insert_word', methods=['POST'])
 def insert_word():
     words = mongo.db.words
@@ -42,35 +46,39 @@ def insert_word():
         flash("This item already exists in the database!")
     return redirect(url_for('get_words'))
 
-      
+
 @app.route('/edit_word/<word_id>')
 def edit_word(word_id):
-    the_word =  mongo.db.words.find_one({"_id": ObjectId(word_id)})
-    all_categories =  mongo.db.categories.find()
-    return render_template('editword.html', word=the_word, categories=all_categories)   
+    the_word = mongo.db.words.find_one({"_id": ObjectId(word_id)})
+    all_categories = mongo.db.categories.find()
+    return render_template('editword.html',
+    word=the_word, categories=all_categories)
+
 
 @app.route('/update_word/<word_id>', methods=["POST"])
 def update_word(word_id):
     words = mongo.db.words
-    words.update( {'_id': ObjectId(word_id)},
+    words.update({'_id': ObjectId(word_id)},
     {
-        'category_name':request.form.get('category_name'),
-        'word_name':request.form.get('word_name'),
+        'category_name': request.form.get('category_name'),
+        'word_name': request.form.get('word_name'),
         'word_definition': request.form.get('word_definition')
-        
+
     })
     return redirect(url_for('get_words'))
+
 
 @app.route('/delete_word/<word_id>')
 def delete_word(word_id):
     mongo.db.words.remove({'_id': ObjectId(word_id)})
-    return redirect(url_for('get_words')) 
+    return redirect(url_for('get_words'))
+
 
 @app.route('/get_categories')
 def get_categories():
     return render_template('categories.html',
-                           categories=mongo.db.categories.find().sort("category_name")) 
-                           # .sort added to display categories in alphabetical order  
+        categories=mongo.db.categories.find().sort("category_name"))
+    # .sort added to display categories in alphabetical order
 
 
 @app.route('/edit_category/<category_id>')
@@ -85,29 +93,31 @@ def update_category(category_id):
     mongo.db.categories.update(
         {'_id': ObjectId(category_id)},
         {'category_name': request.form.get('category_name')})
-    return redirect(url_for('get_categories'))  
+    return redirect(url_for('get_categories'))
+
 
 @app.route('/insert_category', methods=['POST'])
 def insert_category():
     category_doc = mongo.db.categories
     new_category = request.form.get("category_name")
-    
-    if category_doc.count_documents({'category_name': new_category}, limit=1) == 0:
+
+    if category_doc.count_documents({'category_name': new_category},
+    limit=1) == 0:
         category_doc.insert_one(request.form.to_dict())
     else:
-        flash("This item already exists in the database!")    
+        flash("This item already exists in the database!")
     return redirect(url_for('get_categories'))
 
 
 @app.route('/add_category')
 def add_category():
-    return render_template('addcategory.html')    
+    return render_template('addcategory.html')
+
 
 @app.route('/delete_category/<category_id>')
 def delete_category(category_id):
     mongo.db.categories.remove({'_id': ObjectId(category_id)})
-    return redirect(url_for('get_categories'))  
-
+    return redirect(url_for('get_categories'))
 
 
 # GET METHOD
@@ -123,6 +133,7 @@ def get_search():
     results = mongo.db.words.find({"word_name": {"$regex": query, "$options": 'i'}})
     return render_template('search.html',  query=results) # Pass the results to the view
 
+
 @app.route('/get_letters/<letter>') 
 def get_letters(letter): 
     print(letter) 
@@ -134,4 +145,4 @@ def get_letters(letter):
 
 if __name__ == "__main__":
     app.run(host=os.getenv("IP"),
-    port=os.getenv("PORT"), debug=True)
+            port=os.getenv("PORT"), debug=True)

@@ -328,7 +328,7 @@ around The opinions of numerous people including my mentor, friends, tutors, cha
   |   11   |Switched IDE midway through project fron AWS Cloud9 to Gitpod |This was time slightly time consuming, as had to learn working of the new IDE |
   |   12   |Initially `Browse Words` page displayed words in case sensitive order, so that words beginning upper case would superseed words beginning lower case, no matter what the second letter of the word was |`case_sensitive=false` added to Python function|
   |   13   |Initially a link to an online store was planned in the Header of the Wireframes |Due to time constraints and possible Login / Authentification issues, this was not possible |
-  |   14   |Needed to validate CSS for debugging purposes | Utilised jigsaw.W3 CSS Validator (zero errors) |
+  |   14   |Needed to validate CSS for debugging purposes | Utilised jigsaw.W3 CSS Validator. one warning: Imported style sheets are not checked in direct input and file upload modes. This can be ignored, as a does not affect import or code |
   |   15   |Needed to validate JavaScript for debugging purposes | Utilised jshint.com (no errors) |
   |   16   |Needed to validate HTML for debugging purposes | Utilised W3 Markup Validation Service (1 warning) |
   |   17   |`Comments and Messaging service` originlly planned in Wireframes Footer |Due to time constraints and possible Login / Authentification issues, this was not possible|
