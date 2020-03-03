@@ -279,18 +279,11 @@ The main basic functions of the web-app that required rigorous testing in differ
     * Various methods of testing have been carried out to test the code of the web-app. Continuous testing throughout the development has been 
       implemented to check the quality of the code. The aim is to check the functionality of the code on different devices (mobile, tablet, desktop) 
       with an overall perspective of responsive and mobile first design. The site has been viewed and tested in **Firefox**, **Safari**, **Chrome** 
-      **Microsoft Edge** and **Explorer**. The 
-      devices used to test the site are **iPhone 5/SE**, **Samsung Galaxy**, **iPad**, **iPad Pro** **iPhone X**, **iPhone 6/7/8**, **Pixel 2**, 
-      **Pixel 2 XL** , **Hudle2** and **Samsung / Lenovo / HP laptop**. 
+      **Microsoft Edge** and **Explorer**. The devices used to test the site are **iPhone 5/SE**, **Samsung Galaxy**, **iPad**, **iPad Pro** 
+      **iPhone X**, **iPhone 6/7/8**, **Pixel 2**, **Pixel 2 XL** , **Hudle2** and **Samsung / Lenovo / HP laptop**. 
 
 *	**Blank Form Input** 
     *       
-
-*	**Data** 
-    * 
-
-*	**.gitignore** 
-    * 
 
 *	**W3 Nu Html Checker** 
     *  
@@ -302,7 +295,8 @@ The main basic functions of the web-app that required rigorous testing in differ
     * 
 
 *	**PEP8 Online** 
-    *              
+    * The Python (app.py) page requires validation through the online checker. This ensures that the code is more legible and does not contain formatting 
+      errors. http://pep8online.com/checkresult             
        
 The final database schema and desktop wireframes for the web-app can be seen in the *supporting_docs folder* under *oceanic_dictionary_database_schema.png*, 
 *wireframe1_oceanic_dictionary_home.png*, *wireframe2_ oceanic_dictionary_browse_words.png*, *wireframe3_ oceanic_dictionary_manage_categories.png* 
@@ -310,7 +304,6 @@ and unused *wireframe4_ oceanic_dictionary_manage_categories.png*. These wirefra
 around The opinions of numerous people including my mentor, friends, tutors, chat forums and such like, whom were asked during various stages of the project.
 
 ## Issue List
-
 
 
   | Issue  |                 Description                     |       Solution                      |  
@@ -331,9 +324,9 @@ around The opinions of numerous people including my mentor, friends, tutors, cha
   |   14   |Needed to validate CSS for debugging purposes | Utilised jigsaw.W3 CSS Validator. one warning: Imported style sheets are not checked in direct input and file upload modes. This can be ignored, as a does not affect import or code |
   |   15   |Needed to validate JavaScript for debugging purposes | Utilised jshint.com (no errors) |
   |   16   |Needed to validate HTML for debugging purposes | Utilised W3 Markup Validation Service (1 warning) |
-  |   17   |`Comments and Messaging service` originlly planned in Wireframes Footer |Due to time constraints and possible Login / Authentification issues, this was not possible|
+  |   17   |Needed to validate Python (app.py) for debugging purposes| Utilised PEP8 online checker. All code successfully updated and passed |
   |   18   | Initially the `Wave picture` and `Basic Card` were going to appear on each page of the web-app, as in the Wireframes|Decided against this because it was unnecessary|
-  |   19   | ||
+  |   19   |`Comments and Messaging service` originlly planned in Wireframes Footer  |Due to time constraints and possible Login / Authentification issues, this was not possible|
   |   20   |Are Python Flask and Jinja functions self explanatory |Added further comments to app.py file|
   |   21   |Is HTML semantic and self explanatory  | Added further comments to index.html file |
   |   22   |Is main.js self explanatory  | Added further comments to main.js file |

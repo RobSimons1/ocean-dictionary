@@ -138,6 +138,7 @@ h5 {
     font-weight: 970px;
 }
 
+/* Flash error message for duplicate entires to database */
 .flash {
     padding: 20px; 
     background-color: #d3a9a6; 

@@ -26,14 +26,14 @@ def show_words():
 
 @app.route('/get_words')
 def get_words():
-    return render_template("words.html",
-    words=mongo.db.words.find().sort("word_name"))
+    return render_template(
+        "words.html", words=mongo.db.words.find().sort("word_name"))
 
 
 @app.route('/add_word')
 def add_word():
-    return render_template('addword.html',
-    categories=mongo.db.categories.find())
+    return render_template(
+        'addword.html', categories=mongo.db.categories.find())
 
 
 @app.route('/insert_word', methods=['POST'])
@@ -51,15 +51,14 @@ def insert_word():
 def edit_word(word_id):
     the_word = mongo.db.words.find_one({"_id": ObjectId(word_id)})
     all_categories = mongo.db.categories.find()
-    return render_template('editword.html',
-    word=the_word, categories=all_categories)
+    return render_template(
+        'editword.html', word=the_word, categories=all_categories)
 
 
 @app.route('/update_word/<word_id>', methods=["POST"])
 def update_word(word_id):
     words = mongo.db.words
-    words.update({'_id': ObjectId(word_id)},
-    {
+    words.update({'_id': ObjectId(word_id)}, {
         'category_name': request.form.get('category_name'),
         'word_name': request.form.get('word_name'),
         'word_definition': request.form.get('word_definition')
@@ -76,16 +75,17 @@ def delete_word(word_id):
 
 @app.route('/get_categories')
 def get_categories():
-    return render_template('categories.html',
-        categories=mongo.db.categories.find().sort("category_name"))
+    return render_template(
+        'categories.html', categories=mongo.db.categories.find().sort(
+            "category_name"))
     # .sort added to display categories in alphabetical order
 
 
 @app.route('/edit_category/<category_id>')
 def edit_category(category_id):
-    return render_template('editcategory.html',
-                           category=mongo.db.categories.find_one(
-                           {'_id': ObjectId(category_id)}))
+    return render_template(
+        'editcategory.html', category=mongo.db.categories.find_one(
+            {'_id': ObjectId(category_id)}))
 
 
 @app.route('/update_category/<category_id>', methods=['POST'])
@@ -101,9 +101,9 @@ def insert_category():
     category_doc = mongo.db.categories
     new_category = request.form.get("category_name")
 
-    if category_doc.count_documents({'category_name': new_category},
-    limit=1) == 0:
-        category_doc.insert_one(request.form.to_dict())
+    if (category_doc.count_documents(
+            {'category_name': new_category}, limit=1) == 0):
+            category_doc.insert_one(request.form.to_dict())
     else:
         flash("This item already exists in the database!")
     return redirect(url_for('get_categories'))
@@ -126,19 +126,22 @@ def get_search():
     """
     Route to accept a GET request to perform
     a search
-    """ 
-    query = request.args.get('q') # Grab the arugments via GET request
+    """
+    query = request.args.get('q')  # Grab the arugments via GET request
     print(query)
-    
-    results = mongo.db.words.find({"word_name": {"$regex": query, "$options": 'i'}})
-    return render_template('search.html',  query=results) # Pass the results to the view
+
+    results = mongo.db.words.find(
+        {"word_name": {"$regex": query, "$options": 'i'}})
+    return render_template(
+        'search.html',  query=results)  # Pass the results to the view
 
 
-@app.route('/get_letters/<letter>') 
-def get_letters(letter): 
-    print(letter) 
-        
-    results = mongo.db.words.find({"word_name": {"$regex": letter, "$options": 'i'}})   
+@app.route('/get_letters/<letter>')
+def get_letters(letter):
+    print(letter)
+
+    results = mongo.db.words.find(
+        {"word_name": {"$regex": letter, "$options": 'i'}})
 
     return render_template('searchletter.html', letter=results)
     print(word_name)
