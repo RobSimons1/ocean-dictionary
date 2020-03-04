@@ -286,7 +286,8 @@ The main basic functions of the web-app that required rigorous testing in differ
     *       
 
 *	**W3 Nu Html Checker** 
-    *  
+    * All .html files require validation through the online checker. This ensures that the code is more legible and does 
+      not contain formatting errors. https://validator.w3.org/ 
 
 *	**W3C CSS Validator** 
     * The style.css file requires validation through the online checker. This ensures that the code is more legible and does 
@@ -325,7 +326,7 @@ around The opinions of numerous people including my mentor, friends, tutors, cha
   |   13   |Initially a link to an online store was planned in the Header of the Wireframes |Due to time constraints and possible Login / Authentification issues, this was not possible |
   |   14   |Needed to validate CSS for debugging purposes | Utilised jigsaw.W3 CSS Validator. one warning: Imported style sheets are not checked in direct input and file upload modes. This can be ignored, as a does not affect import or code |
   |   15   |Needed to validate JavaScript for debugging purposes | Utilised jshint.com (no errors) |
-  |   16   |Needed to validate HTML for debugging purposes | Utilised W3 Markup Validation Service (1 warning) |
+  |   16   |Needed to validate HTML in all .html pages for debugging purposes | Utilised W3 Markup Validation Service, which returns multiple errors where the syntax '{}' has been used. This is Jinja that has been populated via flask. Therefore, it is not HTML and these errors can be ignored. The method used was to view the page source code in the web-app for each .html page and copy this code in to the validator, as it is pure HTML code.   |
   |   17   |Needed to validate Python (app.py) for debugging purposes| Utilised PEP8 online checker. All code successfully updated and passed |
   |   18   | Initially the `Wave picture` and `Basic Card` were going to appear on each page of the web-app, as in the Wireframes|Decided against this because it was unnecessary|
   |   19   |`Comments and Messaging service` originlly planned in Wireframes Footer  |Due to time constraints and possible Login / Authentification issues, this was not possible|
