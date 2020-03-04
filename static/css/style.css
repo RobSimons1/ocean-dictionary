@@ -14,9 +14,8 @@ a:hover {
 
 @keyframes pulse {
   0% { transform: scale(1); }
-  50% { transform: scale(1.1);
+  50% { transform: scale(1.1); }
   100% { transform: scale(1); }
-  }
 }
 
 .side-nav {    
@@ -132,10 +131,6 @@ h5 {
     padding-bottom: 5px;
     padding-left: 15px;
     padding-right: 15px;
-}
-
-.word_header {
-    font-weight: 970px;
 }
 
 /* Flash error message for duplicate entires to database */

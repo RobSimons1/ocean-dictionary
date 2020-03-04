@@ -289,7 +289,9 @@ The main basic functions of the web-app that required rigorous testing in differ
     *  
 
 *	**W3C CSS Validator** 
-    *      
+    * The style.css file requires validation through the online checker. This ensures that the code is more legible and does 
+      not contain formatting errors. https://jigsaw.w3.org/css-validator/validator
+          
 
 *	**JShint** 
     * 
