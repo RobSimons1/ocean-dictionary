@@ -334,7 +334,7 @@ around The opinions of numerous people including my mentor, friends, tutors, cha
   |   21   |Are Python Flask and Jinja functions self explanatory |Added further comments to app.py file|
   |   22   |Is HTML semantic and self explanatory  | Added further comments to index.html file |
   |   23   |Is main.js self explanatory  | Added further comments to main.js file |
-
+  |   24   |Issue with `Search Button` moving accross rows on smaller resolutions  | Decided to `hide-on-med-and-down`, so this will not overlap any other elements. Most tablets and phones have a `Go` or `Done` button to activate search |
   
 ## Deployment
 
