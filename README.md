@@ -326,13 +326,14 @@ around The opinions of numerous people including my mentor, friends, tutors, cha
   |   13   |Initially a link to an online store was planned in the Header of the Wireframes |Due to time constraints and possible Login / Authentification issues, this was not possible |
   |   14   |Needed to validate CSS for debugging purposes | Utilised jigsaw.W3 CSS Validator. one warning: Imported style sheets are not checked in direct input and file upload modes. This can be ignored, as a does not affect import or code |
   |   15   |Needed to validate JavaScript for debugging purposes | Utilised jshint.com (no errors) |
-  |   16   |Needed to validate HTML in all .html pages for debugging purposes | Utilised W3 Markup Validation Service, which returns multiple errors where the syntax '{}' has been used. This is Jinja that has been populated via flask. Therefore, it is not HTML and these errors can be ignored. The method used was to view the page source code in the web-app for each .html page and copy this code in to the validator, as it is pure HTML code.   |
-  |   17   |Needed to validate Python (app.py) for debugging purposes| Utilised PEP8 online checker. All code successfully updated and passed |
-  |   18   | Initially the `Wave picture` and `Basic Card` were going to appear on each page of the web-app, as in the Wireframes|Decided against this because it was unnecessary|
-  |   19   |`Comments and Messaging service` originlly planned in Wireframes Footer  |Due to time constraints and possible Login / Authentification issues, this was not possible|
-  |   20   |Are Python Flask and Jinja functions self explanatory |Added further comments to app.py file|
-  |   21   |Is HTML semantic and self explanatory  | Added further comments to index.html file |
-  |   22   |Is main.js self explanatory  | Added further comments to main.js file |
+  |   16   |Needed to validate HTML in all .html pages for debugging purposes | Utilised W3 HTML Markup Validation Service, which returns multiple errors where the syntax '{}' has been used. This is Jinja that has been populated via flask. Therefore, it is not HTML and these errors can be ignored. The method used was to view the page source code in the web-app for each .html page and copy this code in to the validator, as it is pure HTML code. |
+  |   17   |`Materalize` versus `W3 HTML Markup Validation Service`  |Only two main errors in `W3 HTML Markup Validation Service`:- 1. `Error: Element div not allowed as child of element ul in this context`. The Materialize Official Documentation (https://materializecss.com/collapsible.html) allows `divs` within a `ul` for a `collapsible` element. Therefore, I have left these features in, as cannot find a better way to list the items without them overlapping (e.g. Word Results)|
+  |   18   |Needed to validate Python (app.py) for debugging purposes| Utilised PEP8 online checker. All code successfully updated and passed |
+  |   19   | Initially the `Wave picture` and `Basic Card` were going to appear on each page of the web-app, as in the Wireframes|Decided against this because it was unnecessary|
+  |   20   |`Comments and Messaging service` originlly planned in Wireframes Footer  |Due to time constraints and possible Login / Authentification issues, this was not possible|
+  |   21   |Are Python Flask and Jinja functions self explanatory |Added further comments to app.py file|
+  |   22   |Is HTML semantic and self explanatory  | Added further comments to index.html file |
+  |   23   |Is main.js self explanatory  | Added further comments to main.js file |
 
   
 ## Deployment
