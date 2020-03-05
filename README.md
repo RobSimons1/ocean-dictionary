@@ -121,21 +121,21 @@ the operation, they are taken back to the Categories page.
 
 ### Features left to implement
 
-* View each category and associated words separately by clicking category name?
+* User can view each category and associated words separately by clicking `category name`. This will bring up all words under one category.
 
-* User can curretly input upper and lower case versions of the same word / category?
+* User can currently input upper and lower case versions of the same into `word` and `category`. Possibly implementing a `Text Index` will fix this?
 
-* Words to be spilt up into there own individual letter and not one continous list of all words in alphabeitical order.
+* Individual words in `Browse Words` page to be spilt up into there own individual letter and not one continous list of all words in alphabeitical order.
 
-* User LOGIN and REGISTER options.
+* User `LOGIN` and `REGISTER` options to be implemented for better security and traceability.
 
-* Voting on words Page? Thumbs up and down. Difficult to implement without user login credentials.
+* Voting on words Page with thumbs `up` and `down` functions detailed in Wireframe4. Difficult to implement without user login credentials.
 
-* Could not create Text Index?
+* `Text Index` could improve overall user experience if implemented?
 
-* Comments and Messaging service originally planned in Wireframes. Difficult to implement without user login credentials.
+* `Comments` and `Messaging` services originally planned in Wireframes. Difficult to implement without user login credentials.
 
-* Online Store originally planned in Wireframes. Difficult to implement without user login credentials.
+* Online `Store` originally planned in Wireframes. Difficult to implement without user login credentials.
 
 ## Technologies Used
 The languages, frameworks, libraries and other tools utilised for building this web-app are:
