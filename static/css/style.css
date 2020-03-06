@@ -24,7 +24,10 @@ a:hover {
 }
 
 ::placeholder {
+    font-family: 'Allerta Stencil', cursive;
     color: #607D8B;
+    font-weight: bolder;
+    font-size: 25px;
 }
 
 .btn_small {

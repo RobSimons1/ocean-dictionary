@@ -58,7 +58,7 @@ will bring up all words related to the specified search that are in the database
 Categories. Direct the user to these specific pages. The links are hilighted and pulse when they are hovered on to make it clear to the user that 
 they are links.
 
-* **Side Nav Bar –** This becomes available on smaller screen types and is present in the form of the hamburger style menu icon in the top left 
+* **Side Nav Bar –** This becomes available on smaller screen types and is present in the form of the radio style menu icon in the top left 
 corner of the Navbar. Once the icon is clicked the Side Navbar presents itself with all the links that are hidden in smaller view (e.g. Home, 
 Browse Words, New Word and Manage Category) that direct the user to the specified page. The links are highlighted and pulse when hovered on  
 to make it clear to the user that they are links.
@@ -136,6 +136,8 @@ the operation, they are taken back to the Categories page.
 * `Comments` and `Messaging` services originally planned in Wireframes. Difficult to implement without user login credentials.
 
 * Online `Store` originally planned in Wireframes. Difficult to implement without user login credentials.
+
+* Currently the user is able to submit a `blank form` to the database. Would like to implement a flashed error message to prevent this.
 
 ## Technologies Used
 The languages, frameworks, libraries and other tools utilised for building this web-app are:
@@ -283,7 +285,7 @@ The main basic functions of the web-app that required rigorous testing in differ
       **iPhone X**, **iPhone 6/7/8**, **Pixel 2**, **Pixel 2 XL** , **Hudle2** and **Samsung / Lenovo / HP laptop**. 
 
 *	**Blank Form Input** 
-    *       
+    * Tested input of a blank form in all field of `input word` and `input category` (See Issues List #25)      
 
 *	**W3 Nu Html Checker** 
     * All .html files require validation through the online checker. This ensures that the code is more legible and does 
@@ -292,10 +294,6 @@ The main basic functions of the web-app that required rigorous testing in differ
 *	**W3C CSS Validator** 
     * The style.css file requires validation through the online checker. This ensures that the code is more legible and does 
       not contain formatting errors. https://jigsaw.w3.org/css-validator/validator
-          
-
-*	**JShint** 
-    * 
 
 *	**PEP8 Online** 
     * The Python (app.py) page requires validation through the online checker. This ensures that the code is more legible and does not contain formatting 
@@ -329,13 +327,14 @@ around The opinions of numerous people including my mentor, friends, tutors, cha
   |   16   |Needed to validate HTML in all .html pages for debugging purposes | Utilised W3 HTML Markup Validation Service, which returns multiple errors where the syntax '{}' has been used. This is Jinja that has been populated via flask. Therefore, it is not HTML and these errors can be ignored. The method used was to view the page source code in the web-app for each .html page and copy this code in to the validator, as it is pure HTML code. |
   |   17   |`Materalize` versus `W3 HTML Markup Validation Service`  |Only one main error in `W3 HTML Markup Validation Service`: `Error: Element div not allowed as child of element ul in this context`. The Materialize Official Documentation (https://materializecss.com/collapsible.html) allows `divs` within a `ul` for a `collapsible` element. Therefore, I have left these features in, as cannot find a better way to list the items without them overlapping (e.g. Word Results)|
   |   18   |Needed to validate Python (app.py) for debugging purposes| Utilised PEP8 online checker. All code successfully updated and passed |
-  |   19   | Initially the `Wave picture` and `Basic Card` were going to appear on each page of the web-app, as in the Wireframes|Decided against this because it was unnecessary|
+  |   19   |Initially the `Wave picture` and `Basic Card` were going to appear on each page of the web-app, as in the Wireframes|Decided against this because it was unnecessary|
   |   20   |`Comments and Messaging service` originlly planned in Wireframes Footer  |Due to time constraints and possible Login / Authentification issues, this was not possible|
   |   21   |Are Python Flask and Jinja functions self explanatory |Added further comments to app.py file|
   |   22   |Is HTML semantic and self explanatory  | Added further comments to index.html file |
   |   23   |Is main.js self explanatory  | Added further comments to main.js file |
   |   24   |Issue with `Search Button` moving accross rows on smaller resolutions  | Decided to `hide-on-med-and-down`, so this will not overlap any other elements. Most tablets and phones have a `Go` or `Done` button to activate search |
-  
+  |   25   |Blank form input | The User should not be able to input a blank form in to the database using the fields in `add_word` and `add_category`. Due to time constraints this prevntion haas not been implemented |
+
 ## Deployment
 
 The web-app is designed in the Gitpod environment and regularly committed to GitHub after each crucial piece of coding. 
@@ -415,5 +414,5 @@ Wave Image: http://www.ox.ac.uk/news/2015-12-16-freak-ocean-waves-hit-without-wa
 
 ### Acknowledgments
 
-Thank you to the Carcharodon Carcharias (White Shark) species whom I find so intriguing and awesome and the people at sharkattackfile.net for compiling such a 
-huge and detailed dataset. I would like to thank Anthony Ngene (https://github.com/tonymontaro) for his invaluable feedback, as supervisor for this project. 
+I would like to thank all of the Code Insitute Tutors for there incredible patients and assitance and Anthony Ngene 
+(https://github.com/tonymontaro) for his invaluable feedback, as supervisor for this project. 
