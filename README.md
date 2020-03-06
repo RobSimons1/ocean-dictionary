@@ -323,7 +323,7 @@ around The opinions of numerous people including my mentor, friends, tutors, cha
   |   12   |Initially `Browse Words` page displayed words in case sensitive order, so that words beginning upper case would superseed words beginning lower case, no matter what the second letter of the word was |`case_sensitive=false` added to Python function|
   |   13   |Initially a link to an online store was planned in the Header of the Wireframes |Due to time constraints and possible Login / Authentification issues, this was not possible |
   |   14   |Needed to validate CSS for debugging purposes | Utilised jigsaw.W3 CSS Validator. one warning: Imported style sheets are not checked in direct input and file upload modes. This can be ignored, as a does not affect import or code |
-  |   15   |Needed to validate JavaScript for debugging purposes | Utilised jshint.com (no errors) |
+  |   15   |Could not resize SideNav Radio Button to appear larger on smaller devices | Can target with CSS using `.button-collapse`, but can only change color. Have left this as general size and colouris adequate in smaller resolutions |
   |   16   |Needed to validate HTML in all .html pages for debugging purposes | Utilised W3 HTML Markup Validation Service, which returns multiple errors where the syntax '{}' has been used. This is Jinja that has been populated via flask. Therefore, it is not HTML and these errors can be ignored. The method used was to view the page source code in the web-app for each .html page and copy this code in to the validator, as it is pure HTML code. |
   |   17   |`Materalize` versus `W3 HTML Markup Validation Service`  |Only one main error in `W3 HTML Markup Validation Service`: `Error: Element div not allowed as child of element ul in this context`. The Materialize Official Documentation (https://materializecss.com/collapsible.html) allows `divs` within a `ul` for a `collapsible` element. Therefore, I have left these features in, as cannot find a better way to list the items without them overlapping (e.g. Word Results)|
   |   18   |Needed to validate Python (app.py) for debugging purposes| Utilised PEP8 online checker. All code successfully updated and passed |
@@ -331,9 +331,9 @@ around The opinions of numerous people including my mentor, friends, tutors, cha
   |   20   |`Comments and Messaging service` originlly planned in Wireframes Footer  |Due to time constraints and possible Login / Authentification issues, this was not possible|
   |   21   |Are Python Flask and Jinja functions self explanatory |Added further comments to app.py file|
   |   22   |Is HTML semantic and self explanatory  | Added further comments to index.html file |
-  |   23   |Is main.js self explanatory  | Added further comments to main.js file |
+  |   23   |Blank form input | The User should not be able to input a blank form in to the database using the fields in `add_word` and `add_category`. Due to time constraints this prevntion haas not been implemented |
   |   24   |Issue with `Search Button` moving accross rows on smaller resolutions  | Decided to `hide-on-med-and-down`, so this will not overlap any other elements. Most tablets and phones have a `Go` or `Done` button to activate search |
-  |   25   |Blank form input | The User should not be able to input a blank form in to the database using the fields in `add_word` and `add_category`. Due to time constraints this prevntion haas not been implemented |
+  |   25   |Materialize Search Word `font-size` is too small to view in smaller devices now that Search Button removed  | Targetted and changed using `font-size` and `font-weight` in CSS, so that the words stand out more on smaller resolutions |
 
 ## Deployment
 
