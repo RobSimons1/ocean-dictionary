@@ -18,28 +18,33 @@ app.secret_key = 'my_secret_key'
 mongo = PyMongo(app)
 
 
+# Index.html (Homepage)
 @app.route('/')
 @app.route('/show_words')
 def show_words():
     return render_template("index.html", words=mongo.db.words.find())
 
 
+# Browse Words Page
 @app.route('/get_words')
 def get_words():
     return render_template(
         "words.html", words=mongo.db.words.find().sort("word_name"))
 
 
+# New Word Page
 @app.route('/add_word')
 def add_word():
     return render_template(
         'addword.html', categories=mongo.db.categories.find())
 
 
+# Function to inject word in to database
 @app.route('/insert_word', methods=['POST'])
 def insert_word():
     words = mongo.db.words
     new_word = request.form.get("word_name")
+    # If stmnt to prevent duplicate words
     if words.count_documents({'word_name': new_word}, limit=1) == 0:
         words.insert_one(request.form.to_dict())
     else:
@@ -47,6 +52,7 @@ def insert_word():
     return redirect(url_for('get_words'))
 
 
+# Edit Word Page
 @app.route('/edit_word/<word_id>')
 def edit_word(word_id):
     the_word = mongo.db.words.find_one({"_id": ObjectId(word_id)})
@@ -55,6 +61,7 @@ def edit_word(word_id):
         'editword.html', word=the_word, categories=all_categories)
 
 
+# Function to update word_name; category_name; word_definition in database
 @app.route('/update_word/<word_id>', methods=["POST"])
 def update_word(word_id):
     words = mongo.db.words
@@ -67,12 +74,14 @@ def update_word(word_id):
     return redirect(url_for('get_words'))
 
 
+# Function to delete words from database
 @app.route('/delete_word/<word_id>')
 def delete_word(word_id):
     mongo.db.words.remove({'_id': ObjectId(word_id)})
     return redirect(url_for('get_words'))
 
 
+# Manage Categories Page
 @app.route('/get_categories')
 def get_categories():
     return render_template(
@@ -81,6 +90,7 @@ def get_categories():
     # .sort added to display categories in alphabetical order
 
 
+# Edit Categories Page
 @app.route('/edit_category/<category_id>')
 def edit_category(category_id):
     return render_template(
@@ -88,6 +98,7 @@ def edit_category(category_id):
             {'_id': ObjectId(category_id)}))
 
 
+# Function to update category in database
 @app.route('/update_category/<category_id>', methods=['POST'])
 def update_category(category_id):
     mongo.db.categories.update(
@@ -96,11 +107,12 @@ def update_category(category_id):
     return redirect(url_for('get_categories'))
 
 
+# Function to inject category in database
 @app.route('/insert_category', methods=['POST'])
 def insert_category():
     category_doc = mongo.db.categories
     new_category = request.form.get("category_name")
-
+    # If stmnt to prevent duplicate categories
     if (category_doc.count_documents(
             {'category_name': new_category}, limit=1) == 0):
             category_doc.insert_one(request.form.to_dict())
@@ -109,18 +121,20 @@ def insert_category():
     return redirect(url_for('get_categories'))
 
 
+# Add Category Page
 @app.route('/add_category')
 def add_category():
     return render_template('addcategory.html')
 
 
+# Function to delete category frm database
 @app.route('/delete_category/<category_id>')
 def delete_category(category_id):
     mongo.db.categories.remove({'_id': ObjectId(category_id)})
     return redirect(url_for('get_categories'))
 
 
-# GET METHOD
+# GET METHOD for Search Bar
 @app.route('/get_search')
 def get_search():
     """
@@ -136,6 +150,7 @@ def get_search():
         'search.html',  query=results)  # Pass the results to the view
 
 
+# Function for Individual Letter search
 @app.route('/get_letters/<letter>')
 def get_letters(letter):
     print(letter)

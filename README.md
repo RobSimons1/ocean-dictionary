@@ -299,7 +299,7 @@ The main basic functions of the web-app that required rigorous testing in differ
 
 *	**PEP8 Online** 
     * The Python (app.py) page requires validation through the online checker. This ensures that the code is more legible and does not contain formatting 
-      errors. http://pep8online.com/checkresult             
+      errors. http://pep8online.com/            
        
 The final database schema and desktop wireframes for the web-app can be seen in the *supporting_docs folder* under *oceanic_dictionary_database_schema.png*, 
 *wireframe1_oceanic_dictionary_home.png*, *wireframe2_ oceanic_dictionary_browse_words.png*, *wireframe3_ oceanic_dictionary_manage_categories.png* 
