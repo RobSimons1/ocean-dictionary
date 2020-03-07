@@ -23,6 +23,10 @@ a:hover {
     background-color: #9FC4D4;
 }
 
+.button-collapse {
+    color: pink;
+}
+
 ::placeholder {    
     color: #607D8B;
     font-weight: bolder;    
