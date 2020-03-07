@@ -18,13 +18,17 @@ a:hover {
   100% { transform: scale(1); }
 }
 
+#nav-mobile {
+    font-weight: bolder;
+}
+
 .side-nav {    
     font-weight: bolder;
     background-color: #9FC4D4;
 }
 
 a.button-collapse, nav a.button-collapse i {
-    color: #26A69A;
+    color: #607D8B;
     font-size: 50px;
     font-weight: bolder;
 }
