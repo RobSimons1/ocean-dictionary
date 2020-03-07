@@ -24,7 +24,8 @@ a:hover {
 }
 
 a.button-collapse, nav a.button-collapse i {
-    font-size: 60px;
+    color: #26A69A;
+    font-size: 50px;
     font-weight: bolder;
 }
 
