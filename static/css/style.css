@@ -23,9 +23,11 @@ a:hover {
     background-color: #9FC4D4;
 }
 
-.button-collapse {
-    color: pink;
+a.button-collapse, nav a.button-collapse i {
+    font-size: 60px;
+    font-weight: bolder;
 }
+
 
 ::placeholder {    
     color: #607D8B;
