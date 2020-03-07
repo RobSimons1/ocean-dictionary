@@ -125,7 +125,7 @@ the operation, they are taken back to the Categories page.
 
 * User can currently input upper and lower case versions of the same into `word` and `category`. Possibly implementing a `Text Index` will fix this?
 
-* Individual words in `Browse Words` page to be spilt up into there own individual letter and not one continous list of all words in alphabeitical order.
+* Individual words in `Browse Words` page to be spilt up into there own individual letter and not one continous list of all words in alphabeitical order. Could potentially add a `Back to Top` button after every Letter instance?
 
 * User `LOGIN` and `REGISTER` options to be implemented for better security and traceability.
 
@@ -335,6 +335,8 @@ around The opinions of numerous people including my mentor, friends, tutors, cha
   |   24   |Issue with `Search Button` moving accross rows on smaller resolutions  | Decided to `hide-on-med-and-down`, so this will not overlap any other elements. Most tablets and phones have a `Go` or `Done` button to activate search |
   |   25   |Materialize Search Word `font-size` is too small to view in smaller devices now that Search Button removed  | Targetted and changed using `font-size` and `font-weight` in CSS, so that the words stand out more on smaller resolutions |
   |   26   |When inspecting smaller resolutions on a PC using `Dev Tools` there is a large amount of white space between the `Main Section` and the `Footer` | When tested on actual devices (e.g. iPhone 5/SE, iPhone 6/7/8), there was not the same large amount of white space. Therefore have left the Materialize margins as they are  |  
+  |   27   |Finally, add non-test data in to the database  | web-app thoroughly tested in Heroku deployed version by inputting actual words, categories and definitions |
+
 ## Deployment
 
 The web-app is designed in the Gitpod environment and regularly committed to GitHub after each crucial piece of coding. 
