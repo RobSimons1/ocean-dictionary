@@ -45,14 +45,14 @@
 					<div>
 						<div id="nav-mobile1" class="left">
 							<form action="{{ url_for('add_word') }}" class="col s4 active">
-								<button class="btn-floating btn-large halfway-fab right waves-effect waves-#377A59" type="submit" name="action">
+								<button class="btn-floating btn-large halfway-fab left waves-effect waves-#377A59" type="submit" name="action">
                                 <i class="material-icons">add</i>
                                 </button>
 							</form>
 						</div>
 					</div>
 					<form action="{{ url_for('get_search') }}">
-						<div id="nav-search" class="col offset-s3 center active">
+						<div id="nav-search" class="col s3 offset-m1 offset-l2 center active">
 							<input type="text" id="q" name="q" placeholder="Search Word">
 						</div>
 							<button class="btn-floating btn-large waves-effect waves-#377A59" type="submit"><i class="material-icons">search</i></button>
