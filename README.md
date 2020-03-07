@@ -333,9 +333,9 @@ around The opinions of numerous people including my mentor, friends, tutors, cha
   |   22   |Is HTML semantic and self explanatory  | Added further comments to index.html file |
   |   23   |Blank form input | The User should not be able to input a blank form in to the database using the fields in `add_word` and `add_category`. Due to time constraints this prevntion haas not been implemented |
   |   24   |Issue with `Search Button` moving accross rows on smaller resolutions  | Decided to `hide-on-med-and-down`, so this will not overlap any other elements. Most tablets and phones have a `Go` or `Done` button to activate search |
-  |   25   |Materialize Search Word `font-size` is too small to view in smaller devices now that Search Button removed  | Targetted and changed using `font-size` and `font-weight` in CSS, so that the words stand out more on smaller resolutions |
+  |   25   |Materialize Search Word `font-size` is too small to view in smaller devices now that Search Button removed  | Targetted and changed using `font-weight` in CSS, so that the words stand out more on smaller resolutions |
   |   26   |When inspecting smaller resolutions on a PC using `Dev Tools` there is a large amount of white space between the `Main Section` and the `Footer` | When tested on actual devices (e.g. iPhone 5/SE, iPhone 6/7/8), there was not the same large amount of white space. Therefore have left the Materialize margins as they are  |  
-  |   27   |Finally, add non-test data in to the database  | web-app thoroughly tested in Heroku deployed version by inputting actual words, categories and definitions |
+  |   27   |Finally, add non-test data in to the database  | web-app thoroughly tested in Heroku deployed version for `CRUD` functionality, by deleting test database inputs and inputting actual words, categories and definitions |
 
 ## Deployment
 

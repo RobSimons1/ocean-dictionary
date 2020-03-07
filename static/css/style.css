@@ -23,11 +23,9 @@ a:hover {
     background-color: #9FC4D4;
 }
 
-::placeholder {
-    font-family: 'Allerta Stencil', cursive;
+::placeholder {    
     color: #607D8B;
-    font-weight: bolder;
-    font-size: 25px;
+    font-weight: bolder;    
 }
 
 .btn_small {
