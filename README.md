@@ -14,6 +14,10 @@ The link for the app is:
 
 *https://ocean-dictionary-flask-mongo.herokuapp.com/*
 
+The link for the Github repository is:
+
+*https://github.com/RobSimons1/ocean-dictionary*
+
 ## UX
 
 In order to make the user experience as easy and enjoyable as possible I opted for a simple looking site that is easy to navigate 
