@@ -129,6 +129,8 @@ the operation, they are taken back to the Categories page.
 
 * User `LOGIN` and `REGISTER` options to be implemented for better security and traceability.
 
+* `Back to top` button to be implemented in `Browse Words` page and `Categories` page to allow user to easliy return to the top of the page. 
+
 * Voting on words Page with thumbs `up` and `down` functions detailed in Wireframe4. Difficult to implement without user login credentials.
 
 * `Text Index` could improve overall user experience if implemented?
@@ -403,7 +405,7 @@ This README.md file is based on the Code Institute template.
 
 Words, Definitions and Categories in Dictionary are taken from many different sources and are mainly used as preliminary 
 filling for the project. Credit to similar websites: https://digimap.edina.ac.uk/webhelp/marine/getting_started/marine_glossary.htm 
-& https://life.bio.sunysb.edu/marinebio/glossary.ghijk.html 
+; https://life.bio.sunysb.edu/marinebio/glossary.ghijk.html ; https://www.enchantedlearning.com/wordlist/ocean.shtml ; https://www.google.com/ ; 
 
 Homepage Paragraph: http://www.seasky.org/
 
